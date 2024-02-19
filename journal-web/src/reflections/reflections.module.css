@@ -1,9 +1,9 @@
-main {
+.reflections {
     background-color: #BFB0D8;
     height: 100vh;
 }
 
-.reflections__info {
+.reflections .reflections__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,7 @@ main {
     margin: 0 auto;
 }
 
-.newEntrylink {
+.reflections .newEntrylink {
     text-decoration: none;
     color: black;
     background-color: white;
@@ -23,14 +23,14 @@ main {
 
 }
 
-.reflections__list {
+.reflections .reflections__list {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.reflections__list__item {
+.reflections .reflections__list__item {
     display: flex;
     margin: 0 auto;
     width: 90%;
@@ -56,7 +56,7 @@ main {
     background-image: linear-gradient(#BFB0D8, #504269);
 }
 
-.writenew {
+.formpage .writenew {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -65,48 +65,48 @@ main {
     border-radius: 25px;
 }
 
-label {
+.formpage label {
     text-align: left;
 }
 
-input, textarea, button {
+.formpage input, .formpage textarea, .formpage button {
     margin-bottom: 1em;
     padding: 1em;
     border-radius: 10px;
     border: none;
 }
 
-textarea {
+.formpage textarea {
     height: 200px;
 }
 
-.formline {
+.formpage .formline {
     height: 1px;
     width: 100%;
     background-color: black;
     margin: 30px 0;
 }
 
-.formbuttons {
+.formpage .formbuttons {
     display: flex;
     justify-content: right;
 }
 
-.submitbutton, button {
+.formpage .submitbutton, .formpage button {
     cursor: pointer;
     padding: 10px 40px;
     border-radius: 400px;
 }
 
-button {
+.formpage button {
     background-color: #C4C4C4;
 }
 
-.submitbutton {
+.formpage .submitbutton {
     background-color: #504269;
     color: white;
     border: none;
-
-
     margin-left: 40px;
 }
+
+
