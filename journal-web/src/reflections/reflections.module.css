@@ -1,0 +1,112 @@
+main {
+    background-color: #BFB0D8;
+    height: 100vh;
+}
+
+.reflections__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newEntrylink {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 400px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.reflections__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reflections__list__item {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 700px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+
+}
+
+
+/* form */
+
+
+.formpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#BFB0D8, #504269);
+}
+
+.writenew {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    padding: 2em;
+    border-radius: 25px;
+}
+
+label {
+    text-align: left;
+}
+
+input, textarea, button {
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+}
+
+textarea {
+    height: 200px;
+}
+
+.formline {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin: 30px 0;
+}
+
+.formbuttons {
+    display: flex;
+    justify-content: right;
+}
+
+.submitbutton, button {
+    cursor: pointer;
+    padding: 10px 40px;
+    border-radius: 400px;
+}
+
+button {
+    background-color: #C4C4C4;
+}
+
+.submitbutton {
+    background-color: #504269;
+    color: white;
+    border: none;
+
+
+    margin-left: 40px;
+}
