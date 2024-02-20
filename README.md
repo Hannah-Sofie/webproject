@@ -29,7 +29,7 @@ for å koble til mongodb express interface
 
 åpne localhost:8081
 
-logge på med 
+logge på med
 
 brukernavn: admin
 
