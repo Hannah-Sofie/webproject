@@ -6,6 +6,11 @@ services:
   mongo:
     image: mongo
     restart: always
+    healthcheck:
+      test: mongosh --eval "db.adminCommand('ping').ok"
+      interval: 6s
+      timeout: 5s
+      retries: 3
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
