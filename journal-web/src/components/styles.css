@@ -1,0 +1,112 @@
+:root {
+  --pure-white: #fff;
+  --white: #f5f5f5;
+  --purple-white: #eae7ff;
+  --light-gray: #cccccc;
+  --gray: #2d3036;
+  --black: #000;
+  --light-purple: #ada4e5;
+  --yellow: #fcc419;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-purple);
+  padding: 1em;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5em;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* LoginPage */
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-input {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--light-gray);
+  background-color: var(--pure-white);
+}
+
+.login-button {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--yellow);
+  color: var(--pure-white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-register-link a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+/* RegisterPage */
+.register-container {
+  max-width: 400px;
+  margin: auto;
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-input {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--light-gray);
+  background-color: var(--pure-white);
+}
+
+.register-button {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--yellow);
+  color: var(--pure-white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-login-link a {
+  color: var(--yellow);
+  text-decoration: none;
+}
