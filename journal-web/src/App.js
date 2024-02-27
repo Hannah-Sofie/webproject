@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
-import Header from "./components/Header"; // Make sure the path to the Header component is correct
+import Header from "./components/Header";
+import MyComponent from "./components/Test";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("login");
@@ -24,6 +25,7 @@ function App() {
         <button onClick={() => setCurrentPage("login")}>Login</button>
         <button onClick={() => setCurrentPage("register")}>Register</button>
       </div>
+      {MyComponent()}
     </div>
   );
 }
