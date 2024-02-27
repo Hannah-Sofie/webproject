@@ -11,15 +11,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      - uses: actions/setup-node@v3
+
+      # Install dependencies for the backend
+      - name: Install journal-backend dependencies
+        uses: actions/setup-node@v3
         with:
-          node-version: "21.x"
-          cache: npm
-      - run: npm install
-      - name: linting
-        run: npm run lint
-      - name: actual testing
-        run: npm test
+          node-version: "20.x" # Updated as per recommendation
+          cache: "npm"
+          cache-dependency-path: journal-backend/package-lock.json
+      - run: cd journal-backend && npm install
+
+      # Install dependencies for the frontend
+      - name: Install journal-web dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          cache: "npm"
+          cache-dependency-path: journal-web/package-lock.json
+      - run: cd journal-web && npm install
+
+      # Linting and testing steps for backend and/or frontend
+      - name: Lint journal-backend
+        run: cd journal-backend && npm run lint
+      - name: Test journal-backend
+        run: cd journal-backend && npm test
+      - name: Lint journal-web
+        run: cd journal-web && npm run lint
+      - name: Test journal-web
+        run: cd journal-web && npm test
 
   build:
     runs-on: ubuntu-latest
@@ -27,7 +46,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: docker/login-action@v3
+      - name: Docker Login
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
