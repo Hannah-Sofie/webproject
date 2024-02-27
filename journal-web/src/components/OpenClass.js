@@ -1,13 +1,10 @@
 import React from "react";
 import "./styles.css";
 import classimage from "./images/class.png";
-import star from "./images/star.png";
 import classdata from "./data/classdata.json"; 
+import Sidebar from "./Sidebar";
 
 function OpenClassPage() {
-
-    //uses json to cycle through the images for each class, 
-    //makes it easy to change the content of each class
 
     const getImage = (imageName) => {
         try {
@@ -20,17 +17,8 @@ function OpenClassPage() {
 
   return (
     <div className="app-container">
-      <aside className="sidebar">
-        
-        <div class="reflections">
-        <img src={star} alt="class" class="classnav-image" />
-        <h1>My reflections</h1>
-        </div>
-        <div class="classnav">
-        <img src={classimage} alt="class" class="classnav-image" />
-        <h1>class</h1>
-        </div>
-      </aside>
+
+      <Sidebar /> 
       <main className="main-content">
         <header className="class-header">
           <div className="class-image">
