@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Class 1",
+      "description": "In this class we learn how we can reflect and learn more about sustainability.",
+      "image": "./images/class1.png" 
+    },
+    {
+        "id": 2,
+        "title": "Class 2",
+        "description": "We learn designing for a better future",
+        "image": "./images/class2.png" 
+      },
+      {
+        "id": 3,
+        "title": "Class 3",
+        "description": "Thinking about how we can make the world a better place",
+        "image": "./images/class3.png" 
+      },
+      {
+        "id": 4,
+        "title": "Class 4",
+        "description": "Make sense of sustainable design",
+        "image": "./images/class4.png" 
+      },
+      {
+        "id": 5,
+        "title": "Class 5",
+        "description": "Philosophy on how we can approach sustainable design",
+        "image": "./images/class5.png" 
+      },
+    {
+      "id": 6,
+      "title": "Class 6",
+      "description": "Make the world a better place",
+      "image": "./images/class6.png" 
+    }
+  ]
