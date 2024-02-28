@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles.css"; // Make sure to import the CSS file
-import logo from "./images/diary.png"; // Make sure to import the image file
+import "./header.css";
+import logo from "./images/diary.png";
 
 function Header() {
   return (
