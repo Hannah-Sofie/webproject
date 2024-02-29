@@ -1,7 +1,7 @@
 import React from "react";
 import './classes.css';
 
-function openClass() {
+function ClassesPage() {
     return (
         <body>
             <header>
@@ -63,4 +63,4 @@ function openClass() {
     );
 }
 
-export default openClass;
+export default ClassesPage;
