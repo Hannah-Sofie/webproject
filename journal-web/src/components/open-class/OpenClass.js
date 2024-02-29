@@ -36,7 +36,7 @@ function OpenClassPage() {
               <div className="class-info">
                 <h3>{classItem.title}</h3>
                 <p>{classItem.description}</p>
-                <button class="open-classroom">Open classroom</button>
+                <button className="open-classroom">Open classroom</button>
               </div>
             </article>
           ))}
