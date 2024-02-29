@@ -1,6 +1,5 @@
-// HomePage.js
 import React from "react";
-import "./styles.css";
+import "./home.css";
 import CustomButton from "./CustomButton";
 import CircleAnimation from "./CircleAnimation";
 import idea from "./images/idea.png";
