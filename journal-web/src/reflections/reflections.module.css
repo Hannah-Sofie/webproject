@@ -41,7 +41,13 @@
     border-radius: 25px;
     padding: 0px 30px;
     margin-bottom: 20px;
+}
 
+.reflections .flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -63,10 +69,35 @@
     width: 700px;
     padding: 2em;
     border-radius: 25px;
+    position: relative;
+}
+
+.formpage .locked-status {
+
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.formpage .locked-status img {
+    width: 30px;
+    height: 30px;
 }
 
 .formpage label {
     text-align: left;
+    font-size: 20px;
+}
+
+.firstLabel {
+    font-size: 30px !important;
 }
 
 .formpage input, .formpage textarea, .formpage button {
@@ -78,6 +109,12 @@
 
 .formpage textarea {
     height: 200px;
+}
+
+.formpage .vedleggimage {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
 }
 
 .formpage .formline {

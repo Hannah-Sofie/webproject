@@ -5,6 +5,8 @@ import writeImage from './images/write.svg';
 import dotsImage from './images/dots.svg';
 import WriteNew from './writeNew';
 import { Link } from 'react-router-dom';
+import UnlockedImage from './images/unlocked.svg';
+import LockedImage from './images/locked.svg';
 
 
 class Reflections extends React.Component {
@@ -53,7 +55,10 @@ class Reflections extends React.Component {
           <div key={reflection.id} className={styles['reflections__list__item']}>
             <div>
               <h2 className={styles['reflections__list__item-title']}>{reflection.title}</h2>
-              <p className={styles['reflections__list__item-status']}>{reflection.status}</p>
+              <div className={styles.flexrow}>
+                <img src={reflection.status === "public" ? UnlockedImage : LockedImage} alt="Status" />
+                <p className={styles['reflections__list__item-status']}>{reflection.status}</p>
+              </div>
             </div>
             <div>
               <p className={styles['reflections__list__item-date']}>{reflection.date}</p>
