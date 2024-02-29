@@ -1,5 +1,6 @@
 import React from "react";
-import "./styles.css";
+import { Link } from "react-router-dom";
+import "./home.css";
 import CustomButton from "./CustomButton";
 import CircleAnimation from "./CircleAnimation";
 import Header from "./Header";
@@ -28,7 +29,7 @@ function LoginPage() {
               className="creativity-icon"
             />
             <h2>Sign In</h2>
-            <form className="login-form-mobile">
+            <form className="login-form">
               <input
                 type="email"
                 className="register-input"
@@ -47,7 +48,7 @@ function LoginPage() {
                 path="/"
               />
               <p className="register-login-link">
-                Don't have an account? <a href="#login">Register here</a>
+                Don't have an account? <Link to="/register">Register here</Link>
               </p>
             </form>
           </div>
