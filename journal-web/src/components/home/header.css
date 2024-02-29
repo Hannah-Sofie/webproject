@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-purple);
+    padding: 1em;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.5em;
+    color: var(--white);
+    font-weight: bold;
+  }
