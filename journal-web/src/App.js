@@ -5,7 +5,7 @@ import LoginPage from "./components/home/LoginPage";
 import RegisterPage from "./components/home/RegisterPage";
 import OpenClassPage from "./components/open-class/OpenClass";
 import Post from "./post/Post";
-import Reflections from "./reflections/Reflections";
+import Reflections from "./reflections/reflections";
 import WriteNew from "./reflections/writeNew";
 
 function App() {
