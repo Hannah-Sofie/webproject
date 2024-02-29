@@ -4,6 +4,8 @@ import HomePage from "./components/home/HomePage";
 import LoginPage from "./components/home/LoginPage";
 import RegisterPage from "./components/home/RegisterPage";
 import OpenClassPage from "./components/open-class/OpenClass";
+import Reflections from "./reflections/Reflections";
+import WriteNew from "./reflections/writeNew";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/open-class" element={<OpenClassPage />} />
+        <Route path="/reflections" element={<Reflections />} />
+        <Route path="/reflections/write-new" element={<WriteNew />} />
       </Routes>
     </Router>
   );
