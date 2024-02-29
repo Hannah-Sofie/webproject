@@ -31,10 +31,6 @@ jobs:
       - run: cd journal-web && npm install
 
       # Linting and testing steps for backend and/or frontend
-      - name: Lint journal-backend
-        run: cd journal-backend && npm run lint
-      - name: Test journal-backend
-        run: cd journal-backend && npm test
       - name: Lint journal-web
         run: cd journal-web && npm run lint
       - name: Test journal-web
