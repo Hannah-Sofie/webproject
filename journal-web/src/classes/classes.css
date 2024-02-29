@@ -8,6 +8,7 @@ body {
 main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 h1 {
@@ -22,6 +23,10 @@ h2 {
     font-size: 16px;
 }
 
+h3 {
+    font-size: 12px;
+}
+
 header {
     font-size: 24px;
     background-color: white;
@@ -34,6 +39,7 @@ header img {
     width: 30px;
 }
 
+/* martin made sidebar component 
 nav {
     display: flex;
     flex-direction: column;
@@ -63,6 +69,8 @@ nav a {
     background-color: #acacac;
 }
 
+*/
+
 #page-header {
     display: flex;
     flex-direction: row;
@@ -70,28 +78,42 @@ nav a {
     align-items: center;
 }
 
-#join-button {
+#new-entry-button {
     font-size: 20px;
-    width: 15%;
+    width: 25%;
     height: 3em;
     background-color: white;
     border: none;
     border-radius: 2em;
 }
 
-#join-button:hover {
+#new-entry-button:hover {
     text-decoration: underline;
     background-color: #D9D9D9;
 }
 
-#classes-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 2.5em;
-    row-gap: 2.5em;
+#class-container img {
+width: 100%;
+max-height: 250px;
 }
 
-.class-zone {
+#class-description {
+    background-color: white;
+    padding: 1em;
+}
+
+#lectures-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2.5em;
+    row-gap: 2.5em;
+    background-color: rgba(255, 255, 255, 0.5) ;
+    padding: 2em;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px 3px rgba(50, 50, 50, 0.3);
+}
+
+.lecture {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,12 +124,17 @@ nav a {
     padding: 1em;
 }
 
+hr {
+    width: 100%;
+    background-color: #acacac;
+}
+
 .class-img {
     max-width: 250px;
     border-radius: 5em;
 }
 
-.open-class-link {
+.open-lecture-link {
     width: 50%;
     color: black;
     background-color: #D9D9D9;
