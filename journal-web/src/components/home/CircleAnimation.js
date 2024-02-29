@@ -3,8 +3,8 @@ import "./circles.css";
 
 function CircleAnimation() {
   return (
-    <div class="circle-container">
-      <ul class="circles">
+    <div className="circle-container">
+      <ul className="circles">
         <li></li>
         <li></li>
         <li></li>
