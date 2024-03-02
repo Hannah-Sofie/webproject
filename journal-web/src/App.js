@@ -7,6 +7,7 @@ import OpenClassPage from "./components/open-class/OpenClass";
 import Post from "./post/Post";
 import Reflections from "./reflections/reflections";
 import WriteNew from "./reflections/writeNew";
+import ClassesPage from "./classes/classes";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/post" element={<Post />} />
         <Route path="/reflections" element={<Reflections />} />
         <Route path="/reflections/write-new" element={<WriteNew />} />
+        <Route path="/classes" element={<ClassesPage />} />
       </Routes>
     </Router>
   );
