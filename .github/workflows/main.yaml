@@ -1,0 +1,58 @@
+name: ci
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.1
+
+      # Install dependencies for the backend
+      - name: Install journal-backend dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x" # Updated as per recommendation
+          cache: "npm"
+          cache-dependency-path: journal-backend/package-lock.json
+      - run: cd journal-backend && npm install
+
+      # Install dependencies for the frontend
+      - name: Install journal-web dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          cache: "npm"
+          cache-dependency-path: journal-web/package-lock.json
+      - run: cd journal-web && npm install
+
+      # Linting and testing steps for backend and/or frontend
+      - name: Lint journal-web
+        run: cd journal-web && npm run lint
+      - name: Test journal-web
+        run: cd journal-web && npm test
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Docker Login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push a docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
