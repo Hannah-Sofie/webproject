@@ -18,49 +18,6 @@
   background-color: var(--white);
 }
 
-/* Sidebar */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.reflections,
-.classnav {
-  color: #000;
-  background-color: #f0f0f0;
-  border: 1px dashed #aaa;
-  width: 390px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  font-family: Poppins;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.reflections:hover,
-.classnav:hover {
-  color: var(--light-purple);
-  background-color: var(--pure-white);
-}
-
-.classnav-image {
-  width: 50px;
-}
-
-.classnav {
-  background: #d9d9d9;
-}
-
 .main-content {
   flex-grow: 1;
   padding: 20px;
