@@ -1,10 +1,10 @@
 import React from "react";
 import "./home.css";
 import CustomButton from "./CustomButton";
-import CircleAnimation from "./CircleAnimation";
+import CircleAnimation from "../circleAnimation/CircleAnimation";
 import idea from "./images/idea.png";
 import pen from "./images/pen.png";
-import Header from "./Header";
+import Header from "../header/Header";
 
 function HomePage() {
   return (

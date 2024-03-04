@@ -1,8 +1,9 @@
 import React from "react";
-import "./styles.css";
+import { Link } from "react-router-dom";
+import "./openclass.css";
 import classimage from "./images/class.png";
 import classdata from "./data/classdata.json";
-import Sidebar from "./Sidebar";
+import Sidebar from "../sidebar/Sidebar";
 
 function OpenClassPage() {
   const getImage = (imageName) => {
@@ -36,7 +37,9 @@ function OpenClassPage() {
               <div className="class-info">
                 <h3>{classItem.title}</h3>
                 <p>{classItem.description}</p>
-                <button className="open-classroom">Open classroom</button>
+                <button className="open-classroom">
+                  <Link to="/post">Open classroom</Link>
+                </button>
               </div>
             </article>
           ))}

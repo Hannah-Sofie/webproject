@@ -4,10 +4,10 @@ import HomePage from "./components/home/HomePage";
 import LoginPage from "./components/home/LoginPage";
 import RegisterPage from "./components/home/RegisterPage";
 import OpenClassPage from "./components/open-class/OpenClass";
-import Post from "./post/Post";
-import Reflections from "./reflections/reflections";
-import WriteNew from "./reflections/writeNew";
-import ClassesPage from "./classes/classes";
+import Post from "./components/post/Post";
+import Reflections from "./components/reflections/reflections";
+import WriteNew from "./components/reflections/writeNew";
+import ClassesPage from "./components/classes/classes";
 
 function App() {
   return (

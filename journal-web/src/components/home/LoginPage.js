@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import CustomButton from "./CustomButton";
-import CircleAnimation from "./CircleAnimation";
-import Header from "./Header";
+import CircleAnimation from "../circleAnimation/CircleAnimation";
+import Header from "../header/Header";
 import idea from "./images/idea.png";
 import creativity from "./images/creativity.png";
 
@@ -45,7 +45,7 @@ function LoginPage() {
                 text="Login"
                 bgcolor="var(--yellow)"
                 color="var(--black)"
-                path="/"
+                path="/reflections"
               />
               <p className="register-login-link">
                 Don't have an account? <Link to="/register">Register here</Link>
