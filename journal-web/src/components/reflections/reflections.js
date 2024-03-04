@@ -84,8 +84,8 @@ class Reflections extends React.Component {
                 </p>
               </div>
               <div>
-                <img src={writeImage} />
-                <img src={dotsImage} />
+                <img src={writeImage} alt="write" />
+                <img src={dotsImage} alt="dots" />
               </div>
             </div>
           ))}
