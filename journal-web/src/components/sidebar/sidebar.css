@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f3f3f3;
 }
 
 .reflections,
@@ -20,11 +21,13 @@
   cursor: pointer;
   outline: none;
   border: none;
-  font-family: Poppins;
-  font-size: 22px;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2.2em;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+  text-decoration: none;
 }
 
 .reflections:hover,
@@ -37,6 +40,6 @@
   width: 50px;
 }
 
-.classnav {
+.active {
   background: #d9d9d9;
 }

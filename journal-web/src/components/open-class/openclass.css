@@ -11,17 +11,16 @@
 
 /* ClassPage */
 .app-container {
-  display: grid;
-  grid-template-columns: 2fr 5fr;
+  display: flex;
+  flex-direction: row;
   max-width: 100%;
   margin: auto;
-  background-color: var(--white);
 }
 
 .main-content {
   flex-grow: 1;
   padding: 20px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .class-header {
@@ -71,7 +70,7 @@
 }
 
 .main-content {
-  background-color: var(--light-purple);
+  background-color: #BFB0D8;
   height: 100svh;
 }
 
@@ -127,20 +126,21 @@
   color: #666;
 }
 
-.class-card button {
-  color: #000;
-  font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.open-classroom-link {
+  width: 50%;
+  color: black;
+  background-color: #D9D9D9;
+
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+
+  padding: .8em;
+  border-radius: 1em;
+  margin-top: 1em;
 }
 
-.open-classroom {
-  border-radius: 4px;
-  border-color: var(--gray);
-}
-
-.open-classroom:hover {
-  background-color: var(--white);
+a:hover {
+  background-color: #acacac;
+  text-decoration: underline;
 }

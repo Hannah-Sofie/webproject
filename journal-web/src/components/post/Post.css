@@ -12,14 +12,6 @@
   margin-left: 10px;
 }
 
-.navigation {
-  height: 60px;
-  padding: 0 20px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-}
-
 .postImage {
   display: flex;
   justify-content: center;

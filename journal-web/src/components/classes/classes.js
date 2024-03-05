@@ -4,15 +4,15 @@ import "./classes.css";
 import classIcon from "./images/classicon.png";
 import test from "./images/test-img.png";
 import Sidebar from "../sidebar/Sidebar";
+import Header from "../header/Header";
 
 function ClassesPage() {
   return (
     <body>
-      <main>
-        <div className="app-container">
-          <Sidebar />
-        </div>
-        <div>
+      <Header />
+      <div id="page-container">
+        <Sidebar />
+        <main>
           <div id="page-header">
             <h1>
               <img src={classIcon} alt="3 people icon" />
@@ -40,7 +40,9 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/open-class" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
               <div className="lecture">
                 <img src={test} className="class-img" alt="Class header" />
@@ -51,7 +53,9 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/open-class" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
               <div className="lecture">
                 <img src={test} className="class-img" alt="Class header" />
@@ -62,7 +66,9 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/open-class" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
               <div className="lecture">
                 <img src={test} className="class-img" alt="Class header" />
@@ -73,12 +79,14 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/open-class" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </body>
   );
 }
