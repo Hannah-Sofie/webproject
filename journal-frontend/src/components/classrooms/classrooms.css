@@ -1,0 +1,153 @@
+:root {
+  --pure-white: #fff;
+  --white: #f5f5f5;
+  --purple-white: #eae7ff;
+  --light-gray: #cccccc;
+  --gray: #2d3036;
+  --black: #000;
+  --light-purple: #ada4e5;
+  --yellow: #fcc419;
+}
+
+/* ClassPage */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  margin: auto;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 83.201px;
+  gap: 16.732px;
+}
+
+.class-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+.class-card img {
+  width: 244px;
+  height: 123px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.main-content {
+  background-color: #BFB0D8;
+  height: 100svh;
+}
+
+.join-class-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+  margin-right: 50px;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.join-class-btn:hover {
+  background-color: var(--white);
+}
+
+.class-image {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+}
+
+.open-classroom {
+  align-items: end;
+}
+
+.class-header-text {
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.class-header img {
+  width: 65px;
+  height: 65px;
+}
+
+.class-card h3 {
+  margin-top: 10px;
+}
+
+.class-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.open-classroom-link {
+  width: 50%;
+  color: black;
+  background-color: #D9D9D9;
+
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+
+  padding: .8em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+a:hover {
+  background-color: #acacac;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+  .app-container {
+      flex-direction: column;
+
+  }
+}

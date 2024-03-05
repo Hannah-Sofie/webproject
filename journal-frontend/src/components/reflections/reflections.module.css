@@ -1,6 +1,6 @@
 .reflections {
     background-color: #BFB0D8;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .reflections .reflections__info {

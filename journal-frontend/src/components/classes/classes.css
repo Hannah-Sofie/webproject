@@ -5,10 +5,14 @@ body {
     margin: 0;
 }
 
-main {
+#page-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -34,23 +38,24 @@ h3 {
     align-items: center;
 }
 
-#new-entry-button {
+#new-entry-link {
     font-size: 20px;
-    width: 25%;
-    height: 3em;
+    color: black;
     background-color: white;
     border: none;
     border-radius: 2em;
+    padding: 1em;
+    text-decoration: none;
 }
 
-#new-entry-button:hover {
+#new-entry-link:hover {
     text-decoration: underline;
     background-color: #D9D9D9;
 }
 
 #class-container img {
-width: 100%;
-max-height: 250px;
+    width: 100%;
+    max-height: 250px;
 }
 
 #class-description {
@@ -63,7 +68,7 @@ max-height: 250px;
     grid-template-columns: auto auto;
     column-gap: 2.5em;
     row-gap: 2.5em;
-    background-color: rgba(255, 255, 255, 0.5) ;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 2em;
     border: 1px solid black;
     box-shadow: 3px 3px 3px 3px rgba(50, 50, 50, 0.3);
@@ -107,6 +112,21 @@ hr {
 a:hover {
     background-color: #acacac;
     text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #page-container {
+        flex-direction: column;
+
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #lectures-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
 }
 
 /* Layout is not responsive at all, a lot of media queries will probably be needed to fix this. */

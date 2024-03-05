@@ -2,21 +2,16 @@ import { Link } from "react-router-dom";
 import Sidebar from "../sidebar/Sidebar";
 import "./Post.css";
 import postImage from "./img/postimage.png";
-import logo from "./img/logo.png";
+import Header from "../header/Header";
 
 function Post() {
   return (
     <div className="postContent">
-      <div className="navigation">
-        <img src={logo} alt="logo" />
-        <p>Sustainability Diary</p>
-      </div>
+        <Header />
       <div className="post">
         <Sidebar />
         <div className="postMain">
-          <button className="postBackButton">
-            <Link to="/open-class">Back to classroom</Link>
-          </button>
+            <Link to="/classroom-opened" className="postBackButton">Back to classroom</Link>
           <div className="postwrapper">
             <div className="postHeader">
               <div className="postImage">

@@ -12,20 +12,13 @@
   margin-left: 10px;
 }
 
-.navigation {
-  height: 60px;
-  padding: 0 20px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-}
-
 .postImage {
   display: flex;
   justify-content: center;
 }
 
 .postImage img {
+  max-width: 100%;
   height: 20%;
 }
 
@@ -33,45 +26,23 @@
   display: flex;
 }
 
-.postSidebar {
-  width: 60vw;
-  background-color: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.sidebarButton {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-decoration: none;
-  color: #000;
-  width: 250px;
-  margin: 5px 10px;
-  border-radius: 50px;
-  background: #d9d9d9;
-  height: 40px;
-  padding: 10px;
-}
-
-.postBackButton {
-  background-color: #fff;
-  padding: 15px 10px;
-  border-radius: 50px;
-  align-items: center;
-  text-decoration: none;
-  color: #000;
-  margin-bottom: 10px;
-}
-
 .postMain {
   margin: 5%;
 }
 
+.postBackButton {
+  background-color: #fff;
+  padding: 1.3em 1em;
+  border-radius: 2em;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
 .postwrapper {
   background-color: #fff;
+  overflow: scroll;
+  margin-top: 2em;
 }
 
 .postHeader {
@@ -90,4 +61,11 @@ p {
 
 .postBody p {
   width: 40%;
+}
+
+@media only screen and (max-width: 800px) {
+  .post {
+      flex-direction: column;
+
+  }
 }

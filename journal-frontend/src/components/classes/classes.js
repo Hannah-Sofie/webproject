@@ -1,24 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./classes.css";
+import "./classroom-opened.css";
 import classIcon from "./images/classicon.png";
 import test from "./images/test-img.png";
 import Sidebar from "../sidebar/Sidebar";
+import Header from "../header/Header";
 
-function ClassesPage() {
+function OpenedClassPage() {
   return (
     <body>
-      <main>
-        <div className="app-container">
-          <Sidebar />
-        </div>
-        <div>
+      <Header />
+      <div id="page-container">
+        <Sidebar />
+        <main>
           <div id="page-header">
             <h1>
               <img src={classIcon} alt="3 people icon" />
               Class 1
             </h1>
-            <button id="new-entry-button">+ New entry</button>
+            <Link to="/reflections/write-new" id="new-entry-link">
+                  + New Entry
+                </Link>
           </div>
           <div id="class-container">
             <img src={test} alt="test class header" />
@@ -40,7 +42,9 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/post" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
               <div className="lecture">
                 <img src={test} className="class-img" alt="Class header" />
@@ -51,7 +55,9 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/post" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
               <div className="lecture">
                 <img src={test} className="class-img" alt="Class header" />
@@ -62,7 +68,9 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/post" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
               <div className="lecture">
                 <img src={test} className="class-img" alt="Class header" />
@@ -73,14 +81,16 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class">Open</Link>
+                <Link to="/post" className="open-lecture-link">
+                  Open
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </body>
   );
 }
 
-export default ClassesPage;
+export default OpenedClassPage;
