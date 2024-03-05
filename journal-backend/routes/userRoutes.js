@@ -9,6 +9,9 @@ const {
 } = require("../controllers/userControllers");
 
 // Define routes for user operations
+router.get("/app", (req, res) => {
+  res.end("it is runnnnig!");
+});
 router.get("/", getAllUsers); // Get all users
 router.get("/:id", getUser); // Get user by ID
 router.post("/", createUser); // Create a new user
