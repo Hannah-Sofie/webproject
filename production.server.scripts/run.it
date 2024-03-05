@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+COMPOSE_FILE="docker.compose.yml"
+WD=""
+
+docker compose -f "$\{WD}/${COMPOSE_FILE}" down
+docker compose -f "$\{WD}/${COMPOSE_FILE}" up -d
+
+set +e
