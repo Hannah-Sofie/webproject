@@ -18,7 +18,9 @@ function ClassesPage() {
               <img src={classIcon} alt="3 people icon" />
               Class 1
             </h1>
-            <button id="new-entry-button">+ New entry</button>
+            <Link to="/reflections/write-new" id="new-entry-link">
+                  + New Entry
+                </Link>
           </div>
           <div id="class-container">
             <img src={test} alt="test class header" />
@@ -40,7 +42,7 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class" className="open-lecture-link">
+                <Link to="/post" className="open-lecture-link">
                   Open
                 </Link>
               </div>
@@ -53,7 +55,7 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class" className="open-lecture-link">
+                <Link to="/post" className="open-lecture-link">
                   Open
                 </Link>
               </div>
@@ -66,7 +68,7 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class" className="open-lecture-link">
+                <Link to="/post" className="open-lecture-link">
                   Open
                 </Link>
               </div>
@@ -79,7 +81,7 @@ function ClassesPage() {
                 </p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/open-class" className="open-lecture-link">
+                <Link to="/post" className="open-lecture-link">
                   Open
                 </Link>
               </div>

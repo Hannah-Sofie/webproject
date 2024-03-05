@@ -40,7 +40,7 @@ function OpenClassPage() {
                 <div className="class-info">
                   <h3>{classItem.title}</h3>
                   <p>{classItem.description}</p>
-                    <Link to="/post" className="open-classroom-link">Open classroom</Link>
+                    <Link to="/classes" className="open-classroom-link">Open classroom</Link>
                 </div>
               </article>
             ))}

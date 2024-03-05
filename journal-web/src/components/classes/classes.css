@@ -38,16 +38,17 @@ h3 {
     align-items: center;
 }
 
-#new-entry-button {
+#new-entry-link {
     font-size: 20px;
-    width: 25%;
-    height: 3em;
+    color: black;
     background-color: white;
     border: none;
     border-radius: 2em;
+    padding: 1em;
+    text-decoration: none;
 }
 
-#new-entry-button:hover {
+#new-entry-link:hover {
     text-decoration: underline;
     background-color: #D9D9D9;
 }

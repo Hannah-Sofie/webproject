@@ -11,7 +11,7 @@ function Sidebar() {
             <img src={star} alt="Reflections" className="classnav-image" /> My
             reflections
           </Link>
-          <Link to="/classes" className="classnav">
+          <Link to="/open-class" className="classnav">
             <img src={classimage} alt="Class" className="classnav-image" />{" "}
             Class
           </Link>
