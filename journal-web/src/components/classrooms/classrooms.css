@@ -144,3 +144,10 @@ a:hover {
   background-color: #acacac;
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 800px) {
+  .app-container {
+      flex-direction: column;
+
+  }
+}
