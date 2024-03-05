@@ -6,16 +6,16 @@ import classimage from "../classrooms/images/class.png";
 
 function Sidebar() {
   return (
-    <aside className="sidebar">
-          <Link to="/reflections" className="reflections active">
+    <nav className="sidebar">
+          <Link to="/reflections" className="nav-link active">
             <img src={star} alt="Reflections" className="classnav-image" /> My
             reflections
           </Link>
-          <Link to="/classrooms" className="classnav">
+          <Link to="/classrooms" className="nav-link">
             <img src={classimage} alt="Class" className="classnav-image" />{" "}
             Class
           </Link>
-    </aside>
+    </nav>
   );
 }
 

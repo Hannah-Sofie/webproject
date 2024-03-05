@@ -4,34 +4,28 @@
   flex-direction: column;
   align-items: center;
   background-color: #f3f3f3;
+  width: 30%;
 }
 
-.reflections,
-.classnav {
-  color: #000;
-  background-color: #f0f0f0;
-  border: 1px dashed #aaa;
-  width: 390px;
-  height: 60px;
+.nav-link {
   display: flex;
   align-items: center;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  border: none;
+
   font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 2.2em;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-
   text-decoration: none;
+
+  color: #000;
+  background-color: #d9d9d9;
+
+  width: 90%;
+  height: 60px;
+  margin: 20px 0;
+  border-radius: 2em;
+  padding: 1.6em 2em 1.6em 1em;
 }
 
-.reflections:hover,
-.classnav:hover {
+.nav-link:hover {
   color: var(--light-purple);
   background-color: var(--pure-white);
 }
@@ -41,5 +35,5 @@
 }
 
 .active {
-  background: #d9d9d9;
+  background: #b0b0b0;
 }
