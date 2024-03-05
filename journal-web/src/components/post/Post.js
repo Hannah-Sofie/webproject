@@ -11,7 +11,7 @@ function Post() {
       <div className="post">
         <Sidebar />
         <div className="postMain">
-            <Link to="/classes" className="postBackButton">Back to classroom</Link>
+            <Link to="/classroom-opened" className="postBackButton">Back to classroom</Link>
           <div className="postwrapper">
             <div className="postHeader">
               <div className="postImage">

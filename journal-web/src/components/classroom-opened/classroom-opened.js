@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./classes.css";
+import "./classroom-opened.css";
 import classIcon from "./images/classicon.png";
 import test from "./images/test-img.png";
 import Sidebar from "../sidebar/Sidebar";
 import Header from "../header/Header";
 
-function ClassesPage() {
+function OpenedClassPage() {
   return (
     <body>
       <Header />
@@ -93,4 +93,4 @@ function ClassesPage() {
   );
 }
 
-export default ClassesPage;
+export default OpenedClassPage;

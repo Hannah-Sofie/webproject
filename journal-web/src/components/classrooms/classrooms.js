@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./openclass.css";
+import "./classrooms.css";
 import classimage from "./images/class.png";
 import classdata from "./data/classdata.json";
 import Sidebar from "../sidebar/Sidebar";
@@ -40,7 +40,7 @@ function OpenClassPage() {
                 <div className="class-info">
                   <h3>{classItem.title}</h3>
                   <p>{classItem.description}</p>
-                    <Link to="/classes" className="open-classroom-link">Open classroom</Link>
+                    <Link to="/classroom-opened" className="open-classroom-link">Open classroom</Link>
                 </div>
               </article>
             ))}
