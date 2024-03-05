@@ -1,28 +1,76 @@
+version: "3.8"
+
 services:
   journal-web:
-    build: .
-    ports:
-      - "3001:3000"
-  mongo:
     image: mongo
-    restart: always
+    container_name: journal-container
+    expose:
+      - "${MONGO_PORT}"
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo_admin_pwd
+    deploy:
+      labels:
+        example.label: "This is a pointless label"
+      restart_policy:
+        condition: on-failure
+        delay: 3s
+        max_attempts: 10
+        window: 120s
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 175M
+        reservations:
+          cpus: "0.25"
+          memory: 75M
+    secrets:
+      - mongo_admin_pwd
     healthcheck:
-      test: mongosh --eval "db.adminCommand('ping').ok"
-      interval: 6s
+      test: ["CMD-SHELL", 'mongosh --eval "db.adminCommand(''ping'').ok"']
+      interval: 10s
       timeout: 5s
       retries: 3
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-  mongo-express:
-    image: mongo-express
-    restart: always
+    env_file: .mongo.env
+    networks:
+      journal-network:
+        aliases:
+          - "${MONGO_HOSTNAME}"
+    logging:
+      driver: "local"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  journal-test:
+    image: journal-image
+    labels:
+      cool.example: "some meta information about our container"
+    depends_on:
+      journal-web:
+        condition: service_healthy
+    build: .
     ports:
-      - 8081:8081
+      - "8083:8083"
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo_admin_pwd
+    secrets:
+      - mongo_admin_pwd
+    env_file:
+      - .mongo.env
+      - .env
+    logging:
+      driver: "local"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - journal-network
+
+secrets:
+  mongo_admin_pwd:
+    file: ./secrets.folder/mongo_admin_pwd.txt
+
 networks:
-  default:
-    name: journal
+  journal-network:
+    name: team3-network
+    external: true
