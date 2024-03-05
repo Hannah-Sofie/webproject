@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  journal-web:
-    image: mongo
+  mongo:
+    image: mongo:latest
     container_name: journal-container
     expose:
       - "${MONGO_PORT}"
@@ -41,22 +41,43 @@ services:
         max-size: "10m"
         max-file: "5"
 
-  journal-test:
-    image: journal-image
+  journal-backend:
+    image: journal-image-backend
     labels:
       cool.example: "some meta information about our container"
     depends_on:
-      journal-web:
+      mongo:
         condition: service_healthy
-    build: .
-    ports:
-      - "8083:8083"
+    build:
+      context: ./journal-backend
+      dockerfile: Dockerfile
     environment:
       MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo_admin_pwd
     secrets:
       - mongo_admin_pwd
     env_file:
       - .mongo.env
+      - .env
+    logging:
+      driver: "local"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - journal-network
+
+  journal-frontend:
+    image: journal-image-frontend
+    labels:
+      cool.example: "some meta information about our container"
+    depends_on:
+      - journal-backend
+    build:
+      context: ./journal-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    env_file:
       - .env
     logging:
       driver: "local"
