@@ -8,6 +8,7 @@ import Post from "./components/post/Post";
 import Reflections from "./components/reflections/reflections";
 import WriteNew from "./components/reflections/writeNew";
 import OpenedClassPage from "./components/classroom-opened/classroom-opened";
+import JoinClassPage from "./components/classrooms/join-class";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/classrooms" element={<ClassroomsPage />} />
         <Route path="/post" element={<Post />} />
-        <Route path="/reflections" element={<Reflections />} />
+        <Route path="/reflections/*" element={<Reflections />} />
         <Route path="/reflections/write-new" element={<WriteNew />} />
         <Route path="/classroom-opened" element={<OpenedClassPage />} />
+        <Route path="/join-class" element={<JoinClassPage />} />
       </Routes>
     </Router>
   );
