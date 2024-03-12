@@ -4,7 +4,7 @@ WORKDIR /journal-frontend
 
 COPY . .
 
-RUN npm ci
+RUN npm install
 
 EXPOSE 8083
 
