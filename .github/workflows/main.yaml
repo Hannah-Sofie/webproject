@@ -32,7 +32,7 @@ jobs:
 
       # Linting and testing steps for backend and/or frontend
       - name: Lint journal-frontend
-        run: cd journal-web && npm run lint
+        run: cd journal-frontend && npm run lint
       - name: Test journal-frontend
         run: cd journal-frontend && npm test
 
