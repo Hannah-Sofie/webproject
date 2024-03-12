@@ -1,5 +1,4 @@
-.DC_Store
-.env
-.eslintrc.js
-.mongo.env
-secrets.folder
+keys
+package.json
+package-lock.json
+notes.md
