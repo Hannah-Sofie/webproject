@@ -22,4 +22,4 @@ for enF in "${ENV_FILES[@]}"; do
   curl -sS "${REPO_URL}/${enF}" > "${WD}/${enF}"
 done
 
-sed +ex
+set +ex
