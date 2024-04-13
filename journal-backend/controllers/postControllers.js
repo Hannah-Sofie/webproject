@@ -35,7 +35,7 @@ const createPost = async (req, res) => {
   }
 };
 
-const updatePsot = async (req, res) => {
+const updatePost = async (req, res) => {
   try {
     const updatePost = await User.findByIdAndUpdate(
       req.params.id,
