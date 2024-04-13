@@ -16,6 +16,12 @@ connectDB();
 const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
 
+const postRoutes = require("./routes/userRoutes");
+app.use("/posts", postRoutes);
+
+const classroomRoutes = require("./routes/classroomRoutes");
+app.use("/classrooms", classroomRoutes);
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
