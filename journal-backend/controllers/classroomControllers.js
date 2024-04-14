@@ -1,8 +1,8 @@
-const classroom = require("../models/classroom");
+const Classroom = require("../models/classroom");
 
 const getAllClassrooms = async (req, res) => {
   try {
-    const classrooms = await classroom.find();
+    const classrooms = await Classroom.find();
     res.json(classrooms);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -11,7 +11,7 @@ const getAllClassrooms = async (req, res) => {
 
 const getClassroom = async (req, res) => {
   try {
-    const classroom = await classroom.findById(req.params.id);
+    const classroom = await Classroom.findById(req.params.id);
     if (classroom) {
       res.json(classroom);
     } else {
@@ -24,7 +24,7 @@ const getClassroom = async (req, res) => {
 
 const createClassroom = async (req, res) => {
   try {
-    const newClassroom = new classroom({
+    const newClassroom = new Classroom({
       title: req.body.title,
       subject: req.body.subject,
     });
@@ -37,7 +37,7 @@ const createClassroom = async (req, res) => {
 
 const updateClassroom = async (req, res) => {
   try {
-    const updatedClassroom = await classroom.findByIdAndUpdate(
+    const updatedClassroom = await Classroom.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
@@ -46,8 +46,8 @@ const updateClassroom = async (req, res) => {
         new: true,
       },
     );
-    if (updateClassroom) {
-      res.json(updateClassroom);
+    if (updatedClassroom) {
+      res.json(updatedClassroom);
     } else {
       res.status(400).json({ message: "Classroom not found" });
     }
@@ -58,7 +58,7 @@ const updateClassroom = async (req, res) => {
 
 const deleteClassroom = async (req, res) => {
   try {
-    const deletedClassroom = await classroom.findByIdAndDelete(req.params.id);
+    const deletedClassroom = await Classroom.findByIdAndDelete(req.params.id);
     if (deletedClassroom) {
       res.json({ message: "Classroom deleted" });
     } else {
@@ -69,7 +69,7 @@ const deleteClassroom = async (req, res) => {
   }
 };
 
-module.esports = {
+module.exports = {
   getClassroom,
   getAllClassrooms,
   createClassroom,

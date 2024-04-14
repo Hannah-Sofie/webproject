@@ -16,7 +16,7 @@ connectDB();
 const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
 
-const postRoutes = require("./routes/userRoutes");
+const postRoutes = require("./routes/postRoutes");
 app.use("/posts", postRoutes);
 
 const classroomRoutes = require("./routes/classroomRoutes");
