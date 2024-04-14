@@ -1,4 +1,4 @@
-const Post = require("../models/post");
+const Post = require("../models/postSchema");
 
 const getAllPosts = async (req, res) => {
   try {
@@ -65,7 +65,7 @@ const deletePost = async (req, res) => {
   }
 };
 
-mosdule.exports = {
+module.exports = {
   getPost,
   getAllPosts,
   createPost,

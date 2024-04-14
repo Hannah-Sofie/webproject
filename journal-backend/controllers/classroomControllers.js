@@ -1,4 +1,4 @@
-const Classroom = require("../models/classroom");
+const Classroom = require("../models/classroomSchema");
 
 const getAllClassrooms = async (req, res) => {
   try {
