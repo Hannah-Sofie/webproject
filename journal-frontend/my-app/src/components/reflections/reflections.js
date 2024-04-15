@@ -1,14 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import styles from "./reflections.module.css";
-import writeImage from "./images/write.svg";
-import dotsImage from "./images/dots.svg";
-import WriteNew from "./writeNew";
 import { Link } from "react-router-dom";
-import UnlockedImage from "./images/unlocked.svg";
-import LockedImage from "./images/locked.svg";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
+import WriteNew from "./writeNew";
+import "./reflections.css";
+
+import icon from "../commonImages/star.svg"
+import writeImage from "../commonImages/write.svg";
+import dotsImage from "../commonImages/dots.svg";
+import UnlockedImage from "../commonImages/unlocked.svg";
+import LockedImage from "../commonImages/locked.svg";
 
 class Reflections extends React.Component {
   constructor(props) {
@@ -19,7 +21,7 @@ class Reflections extends React.Component {
           id: 1,
           title: "Reflection 1",
           content: "This is the first reflection.",
-          status: "public",
+          status: "Public",
           date: "2022-01-01",
           time: "12:00",
         },
@@ -27,7 +29,7 @@ class Reflections extends React.Component {
           id: 2,
           title: "Reflection 2",
           content: "This is the second reflection.",
-          status: "private",
+          status: "Private",
           date: "2022-01-02",
           time: "13:00",
         },
@@ -35,7 +37,7 @@ class Reflections extends React.Component {
           id: 3,
           title: "Reflection 3",
           content: "This is the third reflection.",
-          status: "public",
+          status: "Public",
           date: "2022-01-03",
           time: "14:00",
         },
@@ -45,29 +47,29 @@ class Reflections extends React.Component {
 
   render() {
     return (
-      <body>
+      <div>
         <Header />
         <div id="page-container">
           <Sidebar />
-          <main className={styles["reflections"]}>
-            <div className={styles["reflections__info"]}>
-              <h1 className={styles["reflections__title"]}>My reflections</h1>
-              <Link to="/reflections/write-new" className={styles.newEntrylink}>
-                + new entry
+          <main>
+            <div id="page-header">
+              <h1><img src={icon} alt="cool little star icon"></img>My reflections</h1>
+              <Link to="/reflections/write-new" id="header-link">
+                + New Entry
               </Link>
             </div>
 
-            <div className={styles["reflections__list"]}>
+            <div id="reflections-container">
               {this.state.dummydata.map((reflection) => (
                 <div
                   key={reflection.id}
-                  className={styles["reflections__list__item"]}
+                  className="reflections__list__item"
                 >
                   <div>
-                    <h2 className={styles["reflections__list__item-title"]}>
+                    <h2 className="reflections__list__item-title">
                       {reflection.title}
                     </h2>
-                    <div className={styles.flexrow}>
+                    <div className="flexrow">
                       <img
                         src={
                           reflection.status === "public"
@@ -76,16 +78,16 @@ class Reflections extends React.Component {
                         }
                         alt="Status"
                       />
-                      <p className={styles["reflections__list__item-status"]}>
+                      <p className="reflections__list__item-status">
                         {reflection.status}
                       </p>
                     </div>
                   </div>
                   <div>
-                    <p className={styles["reflections__list__item-date"]}>
+                    <p className="reflections__list__item-date">
                       {reflection.date}
                     </p>
-                    <p className={styles["reflections__list__item-time"]}>
+                    <p className="reflections__list__item-time">
                       {reflection.time}
                     </p>
                   </div>
@@ -101,7 +103,7 @@ class Reflections extends React.Component {
             </Routes>
           </main>
         </div>
-      </body>
+      </div>
     );
   }
 }

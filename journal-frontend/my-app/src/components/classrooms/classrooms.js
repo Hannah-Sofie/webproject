@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./classrooms.css";
-import classimage from "./images/class.png";
 import classdata from "./data/classdata.json";
 import Sidebar from "../sidebar/Sidebar";
 import Header from "../header/Header";
+
+import classIcon from "../commonImages/class.png"
 
 function OpenClassPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,15 +30,15 @@ function OpenClassPage() {
   return (
     <div>
       <Header />
-      <div className="app-container">
+      <div id="page-container">
         <Sidebar />
         <main className="main-content">
           <header className="class-header">
             <div className="class-image">
-              <img src={classimage} alt="Class" />
+              <img src={classIcon} alt="Class" />
               <h1 className="class-header-text">Class</h1>
             </div>
-            <button onClick={handleOpenModal} className="join-class-btn">
+            <button onClick={handleOpenModal} id="join-class-button">
               +Join Classroom
             </button>
           </header>

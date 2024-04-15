@@ -1,0 +1,84 @@
+:root {
+    --pure-white: #fff;
+    --white: #f5f5f5;
+    --purple-white: #eae7ff;
+    --light-gray: #cccccc;
+    --medium-gray: #9a9a9a;
+    --gray: #2d3036;
+    --black: #000;
+    --light-purple: #ada4e5;
+    --dark-purple: #504269;
+    --yellow: #fcc419;
+    --bg-purple: #BFB0D8;
+    --bg-gradient: linear-gradient(#BFB0D8, #504269);
+    --bg-transparent: rgba(255, 255, 255, 0.5);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+body {
+    font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: var(--bg-purple);
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+h1 img {
+    width: 65px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-link {
+    font-size: 20px;
+    color: var(--black);
+    background-color: var(--white);
+    border: none;
+    border-radius: 2em;
+    padding: 1em;
+    text-decoration: none;
+}
+
+#header-link:hover {
+    text-decoration: underline;
+    background-color: var(--light-gray);
+}
+
+
+@media only screen and (max-width: 800px) {
+    #page-container {
+        flex-direction: column;
+
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #lectures-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}

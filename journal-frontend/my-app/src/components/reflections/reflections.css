@@ -1,0 +1,37 @@
+main {
+    width: 60%;
+    margin-top: 1em;
+}
+
+#reflections-container {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.reflections__list__item {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--pure-white);
+    border-radius: 25px;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+}
+
+.reflections__list__item-date {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.reflections__list__item-status {
+    font-weight: bold;
+    font-style: italic;
+}

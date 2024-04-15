@@ -8,7 +8,8 @@ import Post from "./components/post/Post";
 import Reflections from "./components/reflections/reflections";
 import WriteNew from "./components/reflections/writeNew";
 import OpenedClassPage from "./components/classroom-opened/classroom-opened";
-import JoinClassPage from "./components/classrooms/join-class";
+import JoinClassPage from "./components/classrooms/join-class"
+import "./App.css";
 
 function App() {
   return (

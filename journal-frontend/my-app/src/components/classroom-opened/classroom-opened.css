@@ -1,56 +1,6 @@
-body {
-    font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 12px;
-    background-color: #BFB0D8;
-    margin: 0;
-}
-
-#page-container {
-    display: flex;
-    flex-direction: row;
-}
-
 main {
     margin-left: auto;
     margin-right: auto;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-h1 img {
-    width: 65px;
-}
-
-h2 {
-    font-size: 16px;
-}
-
-h3 {
-    font-size: 12px;
-}
-
-#page-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#new-entry-link {
-    font-size: 20px;
-    color: black;
-    background-color: white;
-    border: none;
-    border-radius: 2em;
-    padding: 1em;
-    text-decoration: none;
-}
-
-#new-entry-link:hover {
-    text-decoration: underline;
-    background-color: #D9D9D9;
 }
 
 #class-container img {
@@ -59,7 +9,7 @@ h3 {
 }
 
 #class-description {
-    background-color: white;
+    background-color: var(--pure-white);
     padding: 1em;
 }
 
@@ -68,7 +18,7 @@ h3 {
     grid-template-columns: auto auto;
     column-gap: 2.5em;
     row-gap: 2.5em;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--bg-transparent);
     padding: 2em;
     border: 1px solid black;
     box-shadow: 3px 3px 3px 3px rgba(50, 50, 50, 0.3);
@@ -78,8 +28,8 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    max-width: 300px;
+    background-color: var(--pure-white);
+    max-width: 100%;
     min-height: 290px;
     border-radius: 2em;
     padding: 1em;
@@ -87,18 +37,20 @@ h3 {
 
 hr {
     width: 100%;
-    background-color: #acacac;
+    background-color: var(--light-gray);
 }
 
-.class-img {
-    max-width: 250px;
+.lecture-img {
+    max-width: 80%;
+    height: auto;
     border-radius: 5em;
+    margin-bottom: 1em;
 }
 
 .open-lecture-link {
     width: 50%;
-    color: black;
-    background-color: #D9D9D9;
+    color: var(--black);
+    background-color: var(--light-gray);
 
     font-weight: bold;
     text-decoration: none;
@@ -110,23 +62,7 @@ hr {
 }
 
 a:hover {
-    background-color: #acacac;
+    background-color: var(--gray);
+    color: var(--white);
     text-decoration: underline;
 }
-
-
-@media only screen and (max-width: 800px) {
-    #page-container {
-        flex-direction: column;
-
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    #lectures-container {
-        display: grid;
-        grid-template-columns: auto;
-    }
-}
-
-/* Layout is not responsive at all, a lot of media queries will probably be needed to fix this. */
