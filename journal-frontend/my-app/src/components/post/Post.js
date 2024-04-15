@@ -9,14 +9,14 @@ function Post() {
   return (
     <>
       <Header />
-      <div id="page-container" className="post">
+      <div id="page-container">
         <Sidebar />
-        <div className="postMain">
+        <main className="postMain">
           <Link to="/classroom-opened" id="header-link">Back to classroom</Link>
           <div className="postwrapper">
 
             <div className="postHeader">
-              <img src={postImage} alt="#" />
+              <img src={postImage} alt="#" className="postimage" />
               <h1>Lecture 3</h1>
               <p>
                 Thoughts and reflections about sustainability from todays class.
@@ -31,7 +31,7 @@ function Post() {
               </p>
             </article>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );
