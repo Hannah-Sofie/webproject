@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.memberslistHeader {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.memberslistHeader img {
+    margin-right: 20px;
+}
+
+.memberslistMain {
+    border-radius: 51%;
+}
+
+.memberslist {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    flex-direction: row;
+    border-radius: 10px;
+    height: 50vh;
+    padding: 5%;
+}
+
+.memberslist-item ul {
+    list-style: none;
+}
+.memberslist-item li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.memberslist-item img {
+    margin-right: 10px;
+}
+
+.membersListContainer {
+    display: flex;
+    height: 95vh;
+}
+.memberslistBody {
+    margin: 5%;
+}
