@@ -1,9 +1,9 @@
 import React from "react";
-import list from "./list.svg";
 import Header from "../../header/Header";
 import "./membersList.css";
 import woman from "./woman.svg";
 import man from "./man.svg";
+import listIcon from "../../commonImages/list.svg";
 
 import SidebarTeacher from "../sidebarTeacher/SidebarTeacher";
 
@@ -15,7 +15,7 @@ function MembersList() {
         <SidebarTeacher />
         <div className="memberslistBody">
           <div className="memberslistHeader">
-            <img src={list} alt="Members List" className="classnav-image" />
+            <img src={listIcon} alt="Members List" className="classnav-image" />
             <h1>Members List</h1>
           </div>
           <div className="memberslistMain">
