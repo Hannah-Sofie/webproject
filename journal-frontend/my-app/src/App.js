@@ -9,6 +9,7 @@ import Reflections from "./components/reflections/reflections";
 import WriteNew from "./components/reflections/writeNew";
 import OpenedClassPage from "./components/classroom-opened/classroom-opened";
 import JoinClassPage from "./components/classrooms/join-class";
+import MembersList from "./components/teacherFolder/membersList/membersList";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/reflections/write-new" element={<WriteNew />} />
         <Route path="/classroom-opened" element={<OpenedClassPage />} />
         <Route path="/join-class" element={<JoinClassPage />} />
+        <Route path="/memberslist" element={<MembersList />} />
       </Routes>
     </Router>
   );

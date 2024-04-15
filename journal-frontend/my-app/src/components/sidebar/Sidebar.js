@@ -7,14 +7,13 @@ import classimage from "../classrooms/images/class.png";
 function Sidebar() {
   return (
     <nav className="sidebar">
-          <Link to="/reflections" className="nav-link active">
-            <img src={star} alt="Reflections" className="classnav-image" /> My
-            reflections
-          </Link>
-          <Link to="/classrooms" className="nav-link">
-            <img src={classimage} alt="Class" className="classnav-image" />{" "}
-            Class
-          </Link>
+      <Link to="/reflections" className="nav-link active">
+        <img src={star} alt="Reflections" className="classnav-image" /> My
+        reflections
+      </Link>
+      <Link to="/classrooms" className="nav-link">
+        <img src={classimage} alt="Class" className="classnav-image" /> Class
+      </Link>
     </nav>
   );
 }
