@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import styles from "./reflections.module.css";
 import { useNavigate } from "react-router-dom";
-import UnlockedImage from "./images/unlocked.svg";
-import LockedImage from "./images/locked.svg";
-import VedleggImage from "./images/vedleggImage.svg";
 import Header from "../header/Header";
+import "./writeNew.css";
+
+import UnlockedImage from "../commonImages/unlocked.svg";
+import LockedImage from "../commonImages/locked.svg";
+import VedleggImage from "../commonImages/vedleggImage.svg";
 
 const Toggle = ({ isToggled, handleToggle }) => {
   return (
-    <div className={styles["locked-status"]} onClick={handleToggle}>
+    <div className="locked-status" onClick={handleToggle}>
       {isToggled ? (
         <img src={UnlockedImage} alt="On State" />
       ) : (
@@ -39,19 +40,19 @@ export default function WriteNew() {
   };
 
   return (
-    <body>
+    <>
       <Header />
-      <div className={styles.formpage}>
-        <form className={styles.writenew} onSubmit={handleSubmit}>
-          <label htmlFor="title" className={styles.firstLabel}>
+      <div className="formpage">
+        <form className="writenew" onSubmit={handleSubmit}>
+          <label htmlFor="title" className="title-label">
             Title
           </label>
-          <input type="text" id="title" name="title" />
+          <input type="text" id="title" name="title" placeholder="Title" />
 
           <label htmlFor="content">Content</label>
-          <textarea id="content" name="content" />
+          <textarea id="content" name="content" placeholder="Content" />
 
-          <label className={styles.vedleggimage} htmlFor="file-upload">
+          <label className="vedleggimage" htmlFor="file-upload">
             <img src={VedleggImage} alt="Vedlegg" />
           </label>
           <input
@@ -61,19 +62,14 @@ export default function WriteNew() {
             onChange={handleFileUpload}
           />
 
-          <div className={styles.formline}></div>
-          <div className={styles.formbuttons}>
+          <hr />
+          <div className="formbuttons">
             <button onClick={() => navigate("/reflections")}>Cancel</button>
-            <input
-              className={styles.submitbutton}
-              type="submit"
-              value="Submit"
-              onClick={() => navigate("/reflections")}
-            />
+            <button className="submitbutton" onClick={() => navigate("/reflections")}>Post</button>
           </div>
           <Toggle isToggled={isToggled} handleToggle={handleToggle} />
         </form>
       </div>
-    </body>
+    </>
   );
 }

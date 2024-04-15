@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../sidebar/Sidebar";
 import "./Post.css";
@@ -6,43 +7,33 @@ import Header from "../header/Header";
 
 function Post() {
   return (
-    <div className="postContent">
-        <Header />
-      <div className="post">
+    <>
+      <Header />
+      <div id="page-container">
         <Sidebar />
-        <div className="postMain">
-            <Link to="/classroom-opened" className="postBackButton">Back to classroom</Link>
+        <main className="postMain">
+          <Link to="/classroom-opened" id="header-link">Back to classroom</Link>
           <div className="postwrapper">
+
             <div className="postHeader">
-              <div className="postImage">
-                <img src={postImage} alt="#" />
-              </div>
+              <img src={postImage} alt="#" className="postimage" />
               <h1>Lecture 3</h1>
               <p>
                 Thoughts and reflections about sustainability from todays class.
               </p>
             </div>
-            <div className="postBody">
+            
+            <article className="postBody">
               <p>
                 Today's class on sustainability deeply resonated with me,
                 sparking a profound reflection on how we interact with our
-                environment. We discussed the critical balance between
-                development and the preservation of our natural world,
-                emphasizing the urgent need for sustainable practices in every
-                aspect of life. The concept of sustainability is not just about
-                environmental protection but encompasses economic and social
-                dimensions, ensuring equitable access to resources for all. This
-                holistic approach challenges us to rethink our lifestyles,
-                consumption patterns, and the impact of our daily choices. It's
-                clear that achieving sustainability requires a collective
-                effort, innovative solutions, and a commitment to making lasting
-                changes for the betterment of our planet and future generations.
+                environment.
               </p>
-            </div>
+            </article>
           </div>
-        </div>
+        </main>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,96 @@
+/* form */
+.formpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: var(--bg-gradient);
+}
+
+.writenew {
+    background-color: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 2em;
+    border-radius: 2em;
+    position: relative;
+}
+
+.locked-status {
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.locked-status img {
+    width: 30px;
+    height: 30px;
+}
+
+.title-label {
+    font-size: 30px;
+}
+
+label {
+    text-align: left;
+    font-size: 20px;
+}
+
+
+ input, textarea {
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.vedleggimage {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+.formbuttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.submitbutton, button {
+    font-size: 2em;
+    padding: 0.5em 2em;
+    border-radius: 2em;
+    cursor: pointer;
+    border: none;
+}
+
+button {
+    background-color: var(--light-gray);
+}
+
+.submitbutton {
+    background-color: var(--dark-purple);
+    color: var(--pure-white);
+    margin-left: 2em;
+}
+
+button:hover {
+    background-color: var(--light-purple);
+    color: var(--black);
+}

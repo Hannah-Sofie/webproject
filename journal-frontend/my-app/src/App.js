@@ -8,8 +8,10 @@ import Post from "./components/post/Post";
 import Reflections from "./components/reflections/reflections";
 import WriteNew from "./components/reflections/writeNew";
 import OpenedClassPage from "./components/classroom-opened/classroom-opened";
-import JoinClassPage from "./components/classrooms/join-class";
 import MembersList from "./components/teacherFolder/membersList/membersList";
+import JoinClassPage from "./components/classrooms/join-class";
+import CreateClassPage from "./components/create-class-teacher/CreateClass";
+import "./App.css";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/classroom-opened" element={<OpenedClassPage />} />
         <Route path="/join-class" element={<JoinClassPage />} />
         <Route path="/memberslist" element={<MembersList />} />
+        <Route path="/create-class-teacher" element={<CreateClassPage />} />
       </Routes>
     </Router>
   );
