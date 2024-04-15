@@ -9,8 +9,7 @@ import Reflections from "./components/reflections/reflections";
 import WriteNew from "./components/reflections/writeNew";
 import EditReflection from "./components/reflections/editReflection";
 import OpenedClassPage from "./components/classroom-opened/classroom-opened";
-import MembersList from "./components/teacherFolder/membersList/membersList";
-import JoinClassPage from "./components/classrooms/join-class";
+import JoinClassPage from "./components/classrooms/join-class"
 import CreateClassPage from "./components/create-class-teacher/CreateClass";
 import Profile from "./components/profile/profile";
 import "./App.css";
@@ -29,7 +28,6 @@ function App() {
         <Route path="/reflections/edit-reflection" element={<EditReflection />} />
         <Route path="/classroom-opened" element={<OpenedClassPage />} />
         <Route path="/join-class" element={<JoinClassPage />} />
-        <Route path="/memberslist" element={<MembersList />} />
         <Route path="/create-class-teacher" element={<CreateClassPage />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>

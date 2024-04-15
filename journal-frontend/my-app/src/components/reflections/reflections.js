@@ -72,7 +72,7 @@ class Reflections extends React.Component {
                     <div className="flexrow">
                       <img
                         src={
-                          reflection.status === "public"
+                          reflection.status === "Public"
                             ? UnlockedImage
                             : LockedImage
                         }
@@ -92,7 +92,9 @@ class Reflections extends React.Component {
                     </p>
                   </div>
                   <div>
+                  <Link to="/reflections/edit-reflection">
                     <img src={writeImage} alt="write" />
+                  </Link>
                     <img src={dotsImage} alt="dots" />
                   </div>
                 </div>
