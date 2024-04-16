@@ -4,8 +4,8 @@ import "./createclass.css";
 import classimage from "./images/class.png";
 import earthImage from './images/earth.png';
 import classdata from "./data/classdata.json";
-import Sidebar from "../sidebar/Sidebar";
-import Header from "../header/Header";
+import Sidebar from "../sidebarTeacher/SidebarTeacher";
+import Header from "../../header/Header";
 
 function CreateClassPage() {
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);

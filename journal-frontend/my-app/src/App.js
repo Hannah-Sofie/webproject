@@ -11,7 +11,7 @@ import EditReflection from "./components/reflections/editReflection";
 import OpenedClassPage from "./components/classroom-opened/classroom-opened";
 import MembersList from "./components/teacherFolder/membersList/membersList";
 import JoinClassPage from "./components/classrooms/join-class";
-import CreateClassPage from "./components/create-class-teacher/CreateClass";
+import CreateClassPage from "./components/teacherFolder/create-class-teacher/CreateClass";
 import Profile from "./components/profile/profile";
 import "./App.css";
 
