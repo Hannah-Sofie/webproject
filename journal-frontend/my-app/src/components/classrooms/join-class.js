@@ -24,7 +24,7 @@ function JoinClassPage() {
             <h2>Enter Classroom Code</h2>
             <form onSubmit={handleJoin}>
               <input type="text" placeholder="Classroom Code" name="code" required />
-              <button type="submit">Join</button>
+              <button type="submit" className="button-primary">Join</button>
             </form>
           </div>
         </div>

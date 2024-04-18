@@ -1,4 +1,5 @@
 :root {
+    /* ------------------------ COLORS --------------------- */
     --pure-white: #fff;
     --white: #f5f5f5;
     --purple-white: #eae7ff;
@@ -12,21 +13,58 @@
     --bg-purple: #BFB0D8;
     --bg-gradient: linear-gradient(#BFB0D8, #504269);
     --bg-transparent: rgba(255, 255, 255, 0.5);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* -------------------- Font sizes ---------------------- */
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 18px;
+    --font-size-xlarge: 20px;
+    --font-size-xxlarge: 30px;
+    --font-size-hero: 40px;
+
+    /* ----------------- Font weights ----------------------*/
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-bolder: 900;
+
+    /* ------------- Margins and Paddings for Forms and Buttons ---------------*/
+    --margin-standard: 1em;
+    --padding-standard: 1em;
+    --border-radius-standard: 10px;
+    --border-radius-circle: 50%;
+    --border-radius-pill: 2em;
+    --border-standard: 2px solid black;
+    --border-none: none;
+    --input-min-height: 200px;
+    --icon-size: 50px;
+    --hr-margin-vertical: 30px;
+    --button-font-size: 2em;
+    --button-padding: 0.5em 2em;
 }
+
+/* -------------------------- GLOBAL VARIABLES ------------------------ */
 
 @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
 
 body {
     font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: var(--font-size-small);
     background-color: var(--bg-purple);
     margin: 0;
     min-height: 100vh;
 }
 
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h1 {
-    font-size: 40px;
-    font-weight: normal;
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-normal);
 }
 
 h1 img {
@@ -34,51 +72,415 @@ h1 img {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: var(--font-size-large);
 }
 
 h3 {
-    font-size: 14px;
+    font-size: var(--font-size-medium);
 }
 
-#page-container {
-    display: flex;
-    flex-direction: row;
-}
-
-#page-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#header-link {
-    font-size: 20px;
-    color: var(--black);
-    background-color: var(--white);
-    border: none;
-    border-radius: 2em;
-    padding: 1em;
-    text-decoration: none;
-}
-
-#header-link:hover {
-    text-decoration: underline;
+hr {
+    width: 100%;
     background-color: var(--light-gray);
 }
 
+a:hover {
+    background-color: var(--gray);
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* tools to center stuff */
+
+.center {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .left {
+    display: flex; 
+    justify-content: left; 
+    align-items: left; 
+  }
+
+  .text.center {
+    text-align: center; 
+  }
+  
+  .center.grid {
+    display: grid; 
+    place-items: center; 
+  }
+
+/* ------------------- PAGE LAYOUT ------------------------*/
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+    margin: auto;
+    padding: 20px;
+    background-color: var(--white);
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: var(--margin-standard);
+}
+
+.page-image {
+    width: var(--icon-size);
+}
+
+/* --------------------------- HEADER ------------------------------*/
+
+.header-link {
+    font-size: var(--font-size-xlarge);
+    margin-right: 20px;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: var(--border-radius-pill);
+    padding: var(--padding-standard);
+    text-decoration: none;
+}
+
+.header-link:hover {
+    background-color: var(--light-gray);
+    text-decoration: underline;
+    color: white;
+}
+
+/* ---------------------------- form ---------------------------*/
+
+.title-label {
+    font-size: var(--font-size-xxlarge);
+}
+
+label {
+    text-align: left;
+    font-size: var(--font-size-large);
+}
+
+.form-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 100px;
+    background: var(--pure-white);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: var(--border-radius-standard);
+  }
+  
+  .form-label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+.formpage .writenew {
+    background-color: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 2em;
+    border-radius: var(--border-radius-pill);
+    position: relative;
+}
+
+.formpage input, .formpage textarea {
+    margin-bottom: var(--margin-standard);
+    padding: var(--padding-standard);
+    border-radius: var(--border-radius-standard);
+    border: var(--border-standard);
+}
+
+.formpage textarea {
+    min-height: var(--input-min-height);
+}
+
+.formpage hr {
+    margin: var(--hr-margin-vertical) 0;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    margin-top: 100px;
+  }
+
+  .form-input {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius-standard);
+  }
+  
+/* ------------------------ MODALS -----------------------*/
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--bg-transparent);
+  }
+  
+  .close {
+    padding: var(--padding-standard);
+    color: var(--black);
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    background-color: var(--medium-gray);
+  }
+  
+  .modal-content {
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    margin: 15% auto; 
+    width: 80%;
+    max-width: 560px; 
+    height: 416px; 
+    text-align: center;
+    gap: 40px; 
+    position: relative;
+    border-radius: var(--border-radius-pill);
+  }
+  
+  .modal-code {
+    font-size: var(--font-size-large);
+  }
+
+
+
+/* ------------------------- LOCK/UNLOCK ------------------------*/
+
+.locked-status {
+    height: var(--icon-size);
+    width: var(--icon-size);
+    display: grid;
+    place-items: center;
+    border-radius: var(--border-radius-circle);
+    border: var(--border-standard);
+    position: absolute;
+    right: var(--margin-standard);
+    top: var(--margin-standard);
+    cursor: pointer;
+}
+
+.locked-status img {
+    width: 30px;
+    height: 30px;
+}
+
+/* -------------- BUTTONS -------------------*/
+
+/* Base button style */
+.button {
+    font-size: var(--font-size-large);
+    border-radius: var(--border-radius-pill);
+    padding: 10px 20px; 
+    margin: 10px; 
+    border: none;
+    cursor: pointer;
+
+    outline: none;
+  }
+  
+  .button-primary {
+    background-color: var(--dark-purple); 
+    color: var(--pure-white);
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .button-primary:hover {
+    background-color: #000;
+  }
+  
+  .button-secondary {
+    background-color: var(--light-gray); 
+    color: var(--gray);
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+  }
+  
+  .button-cancel {
+    background-color: #E0E0E0; 
+    color: var(--black);
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  
+  .button-save {
+    background-color: var(--yellow); 
+    color: var(--black);
+  }
+  
+  .button:hover {
+    background-color: var(--light-purple);
+    color: var(--black);
+  }
+  
+  .button-cancel:hover {
+    background-color: #CBCBCB; 
+  }
+  
+  .button-save:hover {
+    background-color: var(--dark-yellow); 
+  }
+
+
+/* -------------------  Main Content Area --------------------- */
+
+.main-content {
+    flex-grow: 1;
+    flex-basis: 0; 
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--bg-purple);
+    border-radius: var(--border-radius-standard);
+    margin-left: 20px; 
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.page-image, .icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+}
+
+.hero-logo {
+    width: 50px;
+}
+
+/* ---------------------- flex layout  ------------------------------ */
+
+.banner {
+    display: flex;
+}
+
+.banner img {
+    max-width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+}
+
+.banner-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch; 
+    justify-content: center;
+}
+
+  .flex-item {
+    display: flex;
+    flex-basis: calc(50% - 40px); 
+    max-width: calc(50% - 40px); 
+    background-color: var(--pure-white);
+    border-radius: var(--border-radius-standard);
+    padding: var(--padding-standard);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .class-img {
+    height: 200px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+.full-width {
+    flex: 0 1 500px; 
+}
+
+.flex-item-full-width {
+    flex: 0 1 500px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 15px;
+    border-radius: var(--border-radius-standard);
+    background-color: var(--pure-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    margin-bottom: var(--margin-standard);
+    transition: transform 0.3s ease; 
+}
+
+.flex-item:hover {
+    transform: translateY(-2px); 
+    transform: scale(1.01);
+    border-color: var(--black);
+    box-shadow: 0px 0px 6px rgb(21, 1, 68); 
+}
+
+
+/* ---------------  MEDIA QUERIES ---------------------*/
 
 @media only screen and (max-width: 800px) {
-    #page-container {
+    .page-container, .app-container {
         flex-direction: column;
-
     }
 }
 
 @media only screen and (max-width: 650px) {
-    #lectures-container {
+    .lectures-container {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .main-content {
+        margin-left: 0; 
+        width: 100%; 
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .page-container {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px;
     }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../header/Header";
-import "./membersList.css";
 import woman from "./woman.svg";
 import man from "./man.svg";
 import listIcon from "../../commonImages/list.svg";
@@ -11,49 +10,29 @@ function MembersList() {
   return (
     <div>
       <Header />
-      <div className="membersListContainer">
+      <div className="page-container">
         <SidebarTeacher />
-        <div className="memberslistBody">
-          <div className="memberslistHeader">
-            <img src={listIcon} alt="Members List" className="classnav-image" />
-            <h1>Members List</h1>
-          </div>
-          <div className="memberslistMain">
+        <main className="main-content">
+          <header className="page-header">
+            <img src={listIcon} alt="Members List" className="page-image" />
+            <h1 className="page-title">Members List</h1>
+          </header>
+          <section className="lectures-container">
             <div className="memberslist">
-              <div className="memberslist-item">
+              <div className="class-card">
                 <h2>Username</h2>
-                <div className="usernameWrapper">
+                <div className="info-wrapper">
                   <ul>
-                    <li>
-                      <img
-                        src={woman}
-                        alt="Profile"
-                        className="profile-image"
-                      />{" "}
-                      agekarl
-                    </li>
-                    <li>
-                      <img src={man} alt="Profile" className="profile-image" />{" "}
-                      ronduc
-                    </li>
-                    <li>
-                      <img
-                        src={woman}
-                        alt="Profile"
-                        className="profile-image"
-                      />{" "}
-                      hegols
-                    </li>
-                    <li>
-                      <img src={man} alt="Profile" className="profile-image" />{" "}
-                      nilpet
-                    </li>
+                    <li><img src={woman} alt="Profile" className="profile-image" /> agekarl</li>
+                    <li><img src={man} alt="Profile" className="profile-image" /> ronduc</li>
+                    <li><img src={woman} alt="Profile" className="profile-image" /> hegols</li>
+                    <li><img src={man} alt="Profile" className="profile-image" /> nilpet</li>
                   </ul>
                 </div>
               </div>
-              <div className="memberslist-item">
+              <div className="class-card">
                 <h2>First name</h2>
-                <div className="firstnameWrapper">
+                <div className="info-wrapper">
                   <ul>
                     <li>Agnete</li>
                     <li>Ronald</li>
@@ -62,9 +41,9 @@ function MembersList() {
                   </ul>
                 </div>
               </div>
-              <div className="memberslist-item">
+              <div className="class-card">
                 <h2>Last name</h2>
-                <div className="lastnameWrapper">
+                <div className="info-wrapper">
                   <ul>
                     <li>Karlsen</li>
                     <li>Duck</li>
@@ -73,9 +52,9 @@ function MembersList() {
                   </ul>
                 </div>
               </div>
-              <div className="memberslist-item">
+              <div className="class-card">
                 <h2>Email</h2>
-                <div className="emailWrapper">
+                <div className="info-wrapper">
                   <ul>
                     <li>agekarl@stud.ntnu.no</li>
                     <li>ronduc@stud.ntnu.no</li>
@@ -85,8 +64,8 @@ function MembersList() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </main>
       </div>
     </div>
   );

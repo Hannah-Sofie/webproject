@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./classrooms.css";
 import classdata from "./data/classdata.json";
 import Sidebar from "../sidebar/Sidebar";
 import Header from "../header/Header";
-
 import classIcon from "../commonImages/class.png"
 
 function OpenClassPage() {
@@ -19,42 +17,37 @@ function OpenClassPage() {
     }
   };
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   return (
     <div>
       <Header />
-      <div id="page-container">
+      <div className="page-container">
         <Sidebar />
         <main className="main-content">
-          <header className="class-header">
-            <div className="class-image">
-              <img src={classIcon} alt="Class" />
-              <h1 className="class-header-text">Class</h1>
+          <header className="page-header">
+            <div className="banner">
+              <img src={classIcon} alt="Class" className="hero-logo" />
+              <h1>Class</h1>
             </div>
-            <button onClick={handleOpenModal} id="join-class-button">
+            <button onClick={handleOpenModal} className="header-link">
               +Join Classroom
             </button>
           </header>
 
-          <section className="class-list">
+          <div className="flex-container">
             {classdata.map((classItem) => (
-              <article key={classItem.id} className="class-card">
-                <img src={getImage(classItem.image)} alt={`Class ${classItem.id}`} />
-                <div className="class-info">
+              <article key={classItem.id} className="flex-item">
+                <img src={getImage(classItem.image)} alt={`Class ${classItem.id}`} className="class-img" />
+                <div className="flex-container center">
                   <h3>{classItem.title}</h3>
-                  <p>{classItem.description}</p>
-                  <Link to="/classroom-opened" className="open-classroom-link">Open classroom</Link>
                 </div>
+                <p>{classItem.description}</p>
+                  <Link to="/classroom-opened" className="open-classroom-link">Open classroom</Link>
               </article>
             ))}
-          </section>
+          </div>
         </main>
       </div>
 
@@ -63,13 +56,12 @@ function OpenClassPage() {
           <div className="modal-content">
             <span className="close" onClick={handleCloseModal}>&times;</span>
             <h1>Join a class</h1>
-            <label class="modal-code">Enter a class code</label>
-            <form class="modal-form">
-              <input type="text" placeholder="865HUY" />
-              <div>
-              <hr></hr>
-              <button type="submit" class="cancel-btn">Cancel</button>
-              <button type="submit" class="join-btn">Join</button>
+            <label className="modal-code" >Enter a class code</label>
+            <form className="modal-form">
+              <input type="text" placeholder="Class Code" />
+              <div className="form-buttons">
+                <button type="button" className="button-cancel" onClick={handleCloseModal}>Cancel</button>
+                <button type="submit" className="button-primary">Join</button>
               </div>
             </form>
           </div>

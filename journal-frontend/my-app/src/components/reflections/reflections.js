@@ -1,12 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
-import WriteNew from "./writeNew";
 import "./reflections.css";
 
-import icon from "../commonImages/star.svg"
+import icon from "../commonImages/star.svg";
 import writeImage from "../commonImages/write.svg";
 import dotsImage from "../commonImages/dots.svg";
 import UnlockedImage from "../commonImages/unlocked.svg";
@@ -49,60 +47,38 @@ class Reflections extends React.Component {
     return (
       <div>
         <Header />
-        <div id="page-container">
+        <div className="page-container">
           <Sidebar />
-          <main>
-            <div id="page-header">
-              <h1><img src={icon} alt="cool little star icon"></img>My reflections</h1>
-              <Link to="/reflections/write-new" id="header-link">
+          <main className="main-content">
+            <header className="page-header">
+              <div className="banner">
+                <img src={icon} alt="My reflections" className="hero-logo" />
+                <h1>My Reflections</h1>
+              </div>
+              <Link to="/reflections/write-new" className="header-link">
                 + New Entry
               </Link>
-            </div>
-
-            <div id="reflections-container">
+            </header>
+            <div className="full-width">
               {this.state.dummydata.map((reflection) => (
-                <div
-                  key={reflection.id}
-                  className="reflections__list__item"
-                >
-                  <div>
-                    <h2 className="reflections__list__item-title">
-                      {reflection.title}
-                    </h2>
-                    <div className="flexrow">
-                      <img
-                        src={
-                          reflection.status === "Public"
-                            ? UnlockedImage
-                            : LockedImage
-                        }
-                        alt="Status"
-                      />
-                      <p className="reflections__list__item-status">
-                        {reflection.status}
-                      </p>
-                    </div>
+                <article key={reflection.id} className="flex-item-full-width">
+                  <img
+                    src={reflection.status === "Public" ? UnlockedImage : LockedImage}
+                    alt="Status"
+                    className="status-icon"
+                  />
+                  <h2>{reflection.title}</h2>
+                  <p>{reflection.status}</p>
+                  <p>{reflection.date} {reflection.time}</p>
+                  <div className="page-actions">
+                    <Link to="/reflections/edit-reflection">
+                      <img src={writeImage} alt="Edit" />
+                    </Link>
+                    <img src={dotsImage} alt="More options" />
                   </div>
-                  <div>
-                    <p className="reflections__list__item-date">
-                      {reflection.date}
-                    </p>
-                    <p className="reflections__list__item-time">
-                      {reflection.time}
-                    </p>
-                  </div>
-                  <div>
-                  <Link to="/reflections/edit-reflection">
-                    <img src={writeImage} alt="write" />
-                  </Link>
-                    <img src={dotsImage} alt="dots" />
-                  </div>
-                </div>
+                </article>
               ))}
             </div>
-            <Routes>
-              <Route path="/write-new" element={<WriteNew />} />
-            </Routes>
           </main>
         </div>
       </div>

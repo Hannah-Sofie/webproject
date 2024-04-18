@@ -1,86 +1,77 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from "../header/Header";
-import "./profile.css";
 import importedProfileImage from "./images/ansikt.jpg";
+import "./profile.css"
 
 const Profile = () => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [newPassword, setNewPassword] = useState('');
-    const [profileImage, setProfileImage] = useState(importedProfileImage);
+    const [profile, setProfile] = useState({
+        firstName: '',
+        lastName: '',
+        newPassword: '',
+        profileImage: importedProfileImage
+    });
 
     const navigate = useNavigate();
 
-    const handleFirstNameChange = (e) => {
-        setFirstName(e.target.value);
-    };
-
-    const handleLastNameChange = (e) => {
-        setLastName(e.target.value);
-    };
-
-    const handleNewPasswordChange = (e) => {
-        setNewPassword(e.target.value);
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setProfile(prevProfile => ({
+            ...prevProfile,
+            [name]: value
+        }));
     };
 
     const handleProfileImageChange = () => {
-        // Logic to change profile image
     };
 
-    const handleSave = () => {
-        // Logic to save profile information
+    const handleSave = (e) => {
+        e.preventDefault();
         navigate('/reflections');
     };
-
-    const handleLogout = () => {
-        // Logic to handle logout
-        navigate('/');
-    };
-
-    const handleCancel = () => {
-        // Logic to handle cancel
-        navigate('/reflections');
-    };
-
 
     return (
-        <div className='profile-container'>
-            <Header />
-            <form>
-                <div className='profile-container_edit'>
-                    <label>
-                        <img src={profileImage} alt="Profile" className='profile-image'/>
-                        <button className='image-button' onClick={handleProfileImageChange}>Change profile picture</button>
-                    </label>
-                    <div>
-                        <label>
-                            First Name:
-                            <input type="text" value={firstName} onChange={handleFirstNameChange} />
-                        </label>
-                        <br />
-                        <label>
-                            Last Name:
-                            <input type="text" value={lastName} onChange={handleLastNameChange} />
-                        </label>
-                        <br />
-                        <label>
-                            New Password:
-                            <input type="password" value={newPassword} onChange={handleNewPasswordChange} />
-                        </label>
-                    </div>
+  <>
+    <Header />
+    <div className='page-container'>
+        <main className="main-content center">
+            <div class="form-container">
+            <form className="profile-form" onSubmit={handleSave}>
+                
+                <div className="profile-picture-container">
+                    <img src={profile.profileImage} alt="Profile" className='profile-image'/>
+                    <button type="button" className='button image-button' onClick={handleProfileImageChange}>Change profile picture</button>
                 </div>
-                <div className='line-seperator'></div>
-        
-                <div className='profile-buttons'>
-                    <button onClick={handleLogout} id='profile-logout'>Logout</button>
-                    <div>
-                        <button onClick={handleCancel} id='profile-cancel'>Cancel</button>
-                        <button onClick={handleSave} id='profile-save'>Save</button>
+                
+                <div>
+                    <div className="form-group">
+                        <label className="form-label">First Name</label>
+                        <input type="text" className="form-input" name="firstName" placeholder='First name' value={profile.firstName} onChange={handleChange} />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Last Name</label>
+                        <input type="text" className="form-input" name="lastName" placeholder='Last name' value={profile.lastName} onChange={handleChange} />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">New Password</label>
+                        <input type="password" className="form-input" name="newPassword" placeholder='New password' value={profile.newPassword} onChange={handleChange} />
                     </div>
                 </div>
             </form>
-        </div>
+            <hr className="form-divider" />
+             <div className="action-buttons">
+                <button type="button" onClick={() => navigate('/')} className='button cancel-btn'>Logout</button>
+                <div>
+                    <button type="button" onClick={() => navigate('/reflections')} className='button cancel-btn'>Cancel</button>
+                    <button type="submit" className='button submit-btn'>Save</button>
+                </div>
+            </div>
+            </div>
+        </main>
+    </div>
+  </>
     );
 };
 

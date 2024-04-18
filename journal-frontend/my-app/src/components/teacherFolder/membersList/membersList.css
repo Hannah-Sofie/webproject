@@ -1,31 +1,25 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .memberslistHeader {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-standard);
 }
 
 .memberslistHeader img {
-    margin-right: 20px;
+    margin-right: var(--margin-standard);
 }
 
 .memberslistMain {
-    border-radius: 51%;
+    border-radius: var(--border-radius-circle);
 }
 
 .memberslist {
-    background-color: #fff;
+    background-color: var(--pure-white);
     display: flex;
     justify-content: space-between;
     width: 60vw;
     flex-direction: row;
-    border-radius: 10px;
+    border-radius: var(--border-radius-standard);
     height: 50vh;
-    padding: 5%;
+    padding: var(--padding-standard);
 }
 
 .memberslist-item ul {
@@ -34,12 +28,12 @@
 .memberslist-item li {
     display: flex;
     align-items: center;
-    margin: 20px 0;
-    font-size: 1rem;
+    margin: var(--margin-standard) 0;
+    font-size: var(--font-size-medium);
 }
 
 .memberslist-item img {
-    margin-right: 10px;
+    margin-right: var(--margin-standard);
 }
 
 .membersListContainer {
@@ -47,5 +41,5 @@
     height: 95vh;
 }
 .memberslistBody {
-    margin: 5%;
+    margin: var(--padding-standard);
 }

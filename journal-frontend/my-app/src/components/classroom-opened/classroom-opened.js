@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./classroom-opened.css";
 import Sidebar from "../sidebar/Sidebar";
 import Header from "../header/Header";
-
-import classIcon from "../commonImages/class.png"
+import classIcon from "../commonImages/class.png";
 import classImg from "./images/class-img.png";
 import lecture1 from "./images/lecture1.png";
 import lecture2 from "./images/lecture2.png";
@@ -15,81 +13,63 @@ function OpenedClassPage() {
   return (
     <>
       <Header />
-      <div id="page-container">
+      <div className="page-container">
         <Sidebar />
-        <main>
-          <div id="page-header">
-            <h1>
-            <img src={classIcon} alt="3 people icon" />
-              Class 1
-            </h1>
-            <Link to="/reflections/write-new" id="header-link">
-                  + New Entry
-                </Link>
-          </div>
+        <main className="main-content">
+          <header className="page-header">
+            <div className="banner">
+              <img src={classIcon} alt="Class" className="hero-logo" />
+              <h1>Class 1</h1>
+            </div>
+            <Link to="/reflections/write-new" className="header-link">
+              + New Entry
+            </Link>
+          </header>
           
-          <div id="class-container">
-            <img src={classImg} alt="test class header" />
-            <div id="class-description">
+          <div className="class-container">
+            <img src={classImg} alt="Class" className="banner-img" />
+            <div className="class-description">
               <h2>Class 1</h2>
+              <div className="flex-item-full-width">
               <p>
                 Description of the class. Here you will learn things.
                 Incredible.
               </p>
             </div>
+            </div>
 
-            <div id="lectures-container">
-              <div className="lecture">
-                <img src={lecture1} className="lecture-img" alt="Class header" />
+            <div className="flex-container">
+              <div className="flex-item">
+                <img src={lecture1} alt="Lecture 1" className="class-img" />
                 <h2>Lecture 1</h2>
-                <p>
-                  Lecture description. This is where the description of the
-                  Lecture goes. Wow.
-                </p>
+                <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/post" className="open-lecture-link">
-                  Open
-                </Link>
+                <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
-              <div className="lecture">
-                <img src={lecture2} className="lecture-img" alt="Class header" />
+              <div className="flex-item">
+                <img src={lecture2} alt="Lecture 2" className="class-img" />
                 <h2>Lecture 2</h2>
-                <p>
-                  Lecture description. This is where the description of the
-                  Lecture goes. Wow.
-                </p>
+                <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/post" className="open-lecture-link">
-                  Open
-                </Link>
+                <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
-              <div className="lecture">
-                <img src={lecture3} className="lecture-img" alt="Class header" />
+              <div className="flex-item">
+                <img src={lecture3} alt="Lecture 3" className="class-img" />
                 <h2>Lecture 3</h2>
-                <p>
-                  Lecture description. This is where the description of the
-                  Lecture goes. Wow.
-                </p>
+                <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/post" className="open-lecture-link">
-                  Open
-                </Link>
+                <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
-              <div className="lecture">
-                <img src={lecture4} className="lecture-img" alt="Class header" />
+              <div className="flex-item">
+                <img src={lecture4} alt="Lecture 4" className="class-img" />
                 <h2>Lecture 4</h2>
-                <p>
-                  Lecture description. This is where the description of the
-                  Lecture goes. Wow.
-                </p>
+                <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
                 <hr />
                 <h3>Author Name</h3>
-                <Link to="/post" className="open-lecture-link">
-                  Open
-                </Link>
+                <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
             </div>
           </div>

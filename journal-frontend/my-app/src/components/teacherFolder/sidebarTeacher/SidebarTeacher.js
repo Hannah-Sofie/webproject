@@ -1,5 +1,5 @@
 import React from "react";
-import "./sidebarTeacher.css";
+import "../../sidebar/sidebar.css";
 import { Link } from "react-router-dom";
 import listIcon from "../../commonImages/list.svg";
 import classIcon from "../../commonImages/class.png";
