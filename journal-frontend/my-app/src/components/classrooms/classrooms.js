@@ -31,9 +31,9 @@ function OpenClassPage() {
               <img src={classIcon} alt="Class" className="hero-logo" />
               <h1>Class</h1>
             </div>
-            <button onClick={handleOpenModal} className="header-link">
-              +Join Classroom
-            </button>
+            <button onClick={handleOpenModal} className="action-button">
+  +Join Classroom
+</button>
           </header>
 
           <div className="flex-container">
@@ -58,7 +58,7 @@ function OpenClassPage() {
             <h1>Join a class</h1>
             <label className="modal-code" >Enter a class code</label>
             <form className="modal-form">
-              <input type="text" placeholder="Class Code" />
+              <input type="text" placeholder="Class Code" className="form-input"/>
               <div className="form-buttons">
                 <button type="button" className="button-cancel" onClick={handleCloseModal}>Cancel</button>
                 <button type="submit" className="button-primary">Join</button>

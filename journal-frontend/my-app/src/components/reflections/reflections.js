@@ -55,8 +55,8 @@ class Reflections extends React.Component {
                 <img src={icon} alt="My reflections" className="hero-logo" />
                 <h1>My Reflections</h1>
               </div>
-              <Link to="/reflections/write-new" className="header-link">
-                + New Entry
+              <Link to="/reflections/write-new" className="action-button">
+              + New Entry
               </Link>
             </header>
             <div className="full-width">

@@ -23,7 +23,7 @@ function JoinClassPage() {
             <span className="close-btn" onClick={toggleModal}>&times;</span>
             <h2>Enter Classroom Code</h2>
             <form onSubmit={handleJoin}>
-              <input type="text" placeholder="Classroom Code" name="code" required />
+              <input type="text" placeholder="Classroom Code" className="form-input" name="code" required />
               <button type="submit" className="button-primary">Join</button>
             </form>
           </div>

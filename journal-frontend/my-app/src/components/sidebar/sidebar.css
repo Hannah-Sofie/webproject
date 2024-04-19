@@ -5,7 +5,9 @@
   align-items: center;
   background-color: var(--white);
   width: 20%;
-  min-height: 100vh;
+  height: 100vh; 
+  padding-top: var(--margin-standard); 
+  box-sizing: border-box; 
 }
 
 .nav-link {
@@ -38,7 +40,22 @@
 
 @media only screen and (max-width: 600px) {
   .sidebar {
-    flex-direction: row;
-    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 100%; 
+    overflow-y: auto; 
+    padding-top: 60px; 
+  }
+
+  .nav-link {
+    width: 100%; /* adjust link width to fill sidebar */
+    justify-content: center; /* center link contents */
+  }
+  
+  /* Hide the sidebar links until the hamburger menu is clicked (you'll need to handle this with JS) */
+  .sidebar.collapsed .nav-link {
+    display: none;
   }
 }

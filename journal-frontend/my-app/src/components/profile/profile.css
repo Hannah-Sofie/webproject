@@ -3,12 +3,17 @@
 .action-buttons {
     display: flex;
     justify-content: space-between;
-    width: 100%; 
 }
 
 .form-container {
-    background-color: var(--light-gray);
-    border-radius: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
 }
 
 .profile-form {
@@ -16,15 +21,16 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     gap: 50px;
-    padding: 40px;
+    margin: 40px;
 }
+
 .image-button {
     height: 40px;
 }
 
 .profile-picture-container {
     display: grid;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 3fr 1fr;
 }
 
 .profile-image {

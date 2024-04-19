@@ -58,7 +58,6 @@ export default function WriteNew() {
             />
           </div>
 
-          <hr className="form-divider" />
           <div class ="file-upload-section">
           <label className="icon-button" htmlFor="file-upload" aria-label="Upload File">
               <img src={VedleggImage} alt="Attachment" />

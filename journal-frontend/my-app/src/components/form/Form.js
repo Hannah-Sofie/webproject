@@ -1,5 +1,7 @@
 import React from 'react';
 
+// this is a reusable form you can use to not having to create the forms from scratch
+
 const FormInput = ({ label, type, name, value, onChange, placeholder, className }) => (
   <div className={`form-group ${className}`}>
     {label && <label className="form-label">{label}</label>}

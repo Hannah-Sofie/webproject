@@ -9,7 +9,7 @@ function SidebarTeacher() {
       <Link to="/create-class-teacher" className="nav-link">
         <img src={classIcon} alt="Class" className="classnav-image" /> Class
       </Link>
-      <Link to="/memberslist" className="nav-link active">
+      <Link to="/memberslist" className="nav-link">
         <img src={listIcon} alt="Reflections" className="classnav-image" />{" "}
         Members list
       </Link>

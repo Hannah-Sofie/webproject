@@ -43,7 +43,6 @@ function OpenedClassPage() {
                 <img src={lecture1} alt="Lecture 1" className="class-img" />
                 <h2>Lecture 1</h2>
                 <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
-                <hr />
                 <h3>Author Name</h3>
                 <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
@@ -51,7 +50,6 @@ function OpenedClassPage() {
                 <img src={lecture2} alt="Lecture 2" className="class-img" />
                 <h2>Lecture 2</h2>
                 <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
-                <hr />
                 <h3>Author Name</h3>
                 <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
@@ -59,7 +57,6 @@ function OpenedClassPage() {
                 <img src={lecture3} alt="Lecture 3" className="class-img" />
                 <h2>Lecture 3</h2>
                 <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
-                <hr />
                 <h3>Author Name</h3>
                 <Link to="/post" className="open-classroom-link">Open</Link>
               </div>
@@ -67,7 +64,6 @@ function OpenedClassPage() {
                 <img src={lecture4} alt="Lecture 4" className="class-img" />
                 <h2>Lecture 4</h2>
                 <p>Lecture description. This is where the description of the Lecture goes. Wow.</p>
-                <hr />
                 <h3>Author Name</h3>
                 <Link to="/post" className="open-classroom-link">Open</Link>
               </div>

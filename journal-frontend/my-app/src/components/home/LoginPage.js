@@ -50,6 +50,9 @@ function LoginPage() {
               <p className="register-login-link">
                 Don't have an account? <Link to="/register">Register here</Link>
               </p>
+              <p className="register-login-link">
+                teacher? <Link to="/create-class-teacher">Go to teacher page</Link>
+              </p>
             </form>
           </div>
         </div>

@@ -34,7 +34,7 @@ const Profile = () => {
   <>
     <Header />
     <div className='page-container'>
-        <main className="main-content center">
+        <main className="main-content">
             <div class="form-container">
             <form className="profile-form" onSubmit={handleSave}>
                 
@@ -64,8 +64,8 @@ const Profile = () => {
              <div className="action-buttons">
                 <button type="button" onClick={() => navigate('/')} className='button cancel-btn'>Logout</button>
                 <div>
-                    <button type="button" onClick={() => navigate('/reflections')} className='button cancel-btn'>Cancel</button>
-                    <button type="submit" className='button submit-btn'>Save</button>
+                    <button type="button" onClick={() => navigate('/reflections')} className='button-cancel'>Cancel</button>
+                    <button type="submit" className='button-save'>Save</button>
                 </div>
             </div>
             </div>

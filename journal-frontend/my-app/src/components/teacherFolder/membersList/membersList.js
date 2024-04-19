@@ -5,8 +5,44 @@ import man from "./man.svg";
 import listIcon from "../../commonImages/list.svg";
 
 import SidebarTeacher from "../sidebarTeacher/SidebarTeacher";
+import "./membersList.css"; // Ensure you have the correct path to your CSS file
 
 function MembersList() {
+  const membersData = [
+    {
+      id: 1,
+      username: "agekarl",
+      firstName: "Agnete",
+      lastName: "Karlsen",
+      email: "agekarl@stud.ntnu.no",
+      gender: "female",
+    },
+    {
+      id: 2,
+      username: "ronduc",
+      firstName: "Ronald",
+      lastName: "Duck",
+      email: "ronduc@stud.ntnu.no",
+      gender: "male",
+    },
+    {
+      id: 3,
+      username: "hegols",
+      firstName: "Hege",
+      lastName: "Olsen",
+      email: "hegols@stud.ntnu.no",
+      gender: "female",
+    },
+    {
+      id: 4,
+      username: "nilpet",
+      firstName: "Nils",
+      lastName: "Petter",
+      email: "nilpet@stud.ntnu.no",
+      gender: "male",
+    },
+  ];
+
   return (
     <div>
       <Header />
@@ -14,56 +50,21 @@ function MembersList() {
         <SidebarTeacher />
         <main className="main-content">
           <header className="page-header">
-            <img src={listIcon} alt="Members List" className="page-image" />
-            <h1 className="page-title">Members List</h1>
-          </header>
-          <section className="lectures-container">
-            <div className="memberslist">
-              <div className="class-card">
-                <h2>Username</h2>
-                <div className="info-wrapper">
-                  <ul>
-                    <li><img src={woman} alt="Profile" className="profile-image" /> agekarl</li>
-                    <li><img src={man} alt="Profile" className="profile-image" /> ronduc</li>
-                    <li><img src={woman} alt="Profile" className="profile-image" /> hegols</li>
-                    <li><img src={man} alt="Profile" className="profile-image" /> nilpet</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="class-card">
-                <h2>First name</h2>
-                <div className="info-wrapper">
-                  <ul>
-                    <li>Agnete</li>
-                    <li>Ronald</li>
-                    <li>Hege</li>
-                    <li>Nils</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="class-card">
-                <h2>Last name</h2>
-                <div className="info-wrapper">
-                  <ul>
-                    <li>Karlsen</li>
-                    <li>Duck</li>
-                    <li>Olsen</li>
-                    <li>Petter</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="class-card">
-                <h2>Email</h2>
-                <div className="info-wrapper">
-                  <ul>
-                    <li>agekarl@stud.ntnu.no</li>
-                    <li>ronduc@stud.ntnu.no</li>
-                    <li>hegols@stud.ntnu.no</li>
-                    <li>nilpet@stud.ntnu.no</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="banner">
+              <img src={listIcon} alt="Members List" className="page-image" />
+              <h1>Members List</h1>
             </div>
+          </header>
+          <section className="full-width">
+            {membersData.map((member, index) => (
+              <article key={index} className="flex-item-full-width">
+                <img src={member.gender === "female" ? woman : man} alt="Profile" className="profile-image" />
+                <h2>{member.username}</h2>
+                <p>{member.firstName}</p>
+                <p>{member.lastName}</p>
+                <p>{member.email}</p>
+              </article>
+            ))}
           </section>
         </main>
       </div>
