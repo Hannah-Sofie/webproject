@@ -5,7 +5,6 @@ import Header from "../header/Header";
 import UnlockedImage from "../commonImages/unlocked.svg";
 import LockedImage from "../commonImages/locked.svg";
 import VedleggImage from "../commonImages/vedleggImage.svg";
-import "./writenew.css"
 
 const Toggle = ({ isToggled, handleToggle }) => {
   return (
