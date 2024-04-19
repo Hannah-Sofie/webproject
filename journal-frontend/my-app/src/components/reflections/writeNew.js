@@ -5,6 +5,7 @@ import Header from "../header/Header";
 import UnlockedImage from "../commonImages/unlocked.svg";
 import LockedImage from "../commonImages/locked.svg";
 import VedleggImage from "../commonImages/vedleggImage.svg";
+import "./writeNew.css"
 
 const Toggle = ({ isToggled, handleToggle }) => {
   return (
@@ -57,6 +58,7 @@ export default function WriteNew() {
             />
           </div>
 
+          <hr className="form-divider" />
           <div class ="file-upload-section">
           <label className="icon-button" htmlFor="file-upload" aria-label="Upload File">
               <img src={VedleggImage} alt="Attachment" />
